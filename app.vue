@@ -8,4 +8,8 @@
   <NuxtLink to="/pagamento">Vá pagar</NuxtLink>
 
   <NuxtLink to="/pagamento_aprovado">Deu certo</NuxtLink>
+
+  <NuxtLink to="/monte-sua-festa">Monte o seu</NuxtLink>
+  <NuxtLink to="/revisao">revisao</NuxtLink>
+  <NuxtLink to="/recuperar-senha">recuperar senha</NuxtLink>
 </template>
