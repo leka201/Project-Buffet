@@ -1,0 +1,65 @@
+body{
+    font-family: arial;
+    background: #e6e7eb;
+    text-align: center;
+}
+
+.Titulo{
+    background: #6E32A6;
+    color: #F5F5F5;
+    padding: 20px;
+    margin: 0;
+    border-radius: 20px;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.cartão{
+    font-size: 25px;
+}
+
+.pix{
+    font-size: 25px;
+}
+
+div{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.espaço{
+    margin-bottom: 0px;
+}
+
+.OpçãoCartão{
+    margin-left: 550px;
+}
+
+.efetuarPagamento{
+    background: #6E32A6;
+    color: #F5F5F5;
+    cursor: pointer;
+    text-align: center;
+}
+
+.efetuarPagamento:hover{
+    background: #bb84ee;
+    color: black;
+}
+
+.voltar{
+    background: green;
+    color: #e6e7eb;
+    cursor: pointer;
+}
+
+.voltar:hover{
+    background:lightgreen;
+    color: black;
+}
+
+button{
+    text-align: center;
+}

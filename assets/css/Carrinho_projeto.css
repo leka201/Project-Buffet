@@ -1,0 +1,72 @@
+body{
+    font-family: arial;
+    background: #e6e7eb;
+    text-align: center;
+}
+
+.titulo{
+    background: #6E32A6;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 30px ;
+}
+
+img{
+    border-radius: 100%;
+    
+}
+
+.Escritas{
+    text-align: center;
+    font-size: 20px;
+}
+
+.Preço{
+    text-align: center;
+    font-size: 20px;
+}
+
+.cancelar{
+    background: red;
+    cursor: pointer;
+    color: #F5F5F5;
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.cancelar:hover{
+    background: lightcoral;
+    color: black;
+}
+
+.carrinho{
+    margin-bottom: 20px;
+}
+
+.salvarContinuarComprando{
+    background: lightyellow;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.salvarContinuarComprando:hover{
+    background: yellow;
+}
+
+.salvarContinuar{
+    background: green;
+    cursor: pointer;
+    color: #F5F5F5;
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.salvarContinuar:hover{
+    background: lightgreen;
+    color: black;
+}
