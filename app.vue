@@ -8,4 +8,7 @@
   <NuxtLink to="/pagamento">Vá pagar</NuxtLink>
 
   <NuxtLink to="/pagamento_aprovado">Deu certo</NuxtLink>
+
+  <NuxtLink to="/">Deu certo</NuxtLink>
+
 </template>
