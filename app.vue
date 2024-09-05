@@ -9,7 +9,6 @@
 
   <NuxtLink to="/pagamento_aprovado">Deu certo</NuxtLink>
 
-  <NuxtLink to="/cadastro">cadastro</NuxtLink>
 
-  <NuxtLink to="/login">login</NuxtLink>
+
 </template>
