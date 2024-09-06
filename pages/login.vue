@@ -1,3 +1,7 @@
+<script>
+import('/assets/css/loginnovo.css')
+</script>
+
 <template>
     <div class="login-wrapper">
     <div class="login-card">

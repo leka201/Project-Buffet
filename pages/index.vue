@@ -1,4 +1,13 @@
+<script>
+
+import('~/assets/css/index.css')
+
+</script>
+
+
 <template>
+
+
     
 
 <div class="bordaredonda">
