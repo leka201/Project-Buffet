@@ -1,3 +1,4 @@
+
 <template>
      <!-- Pagina de pagamento-->
      <h1 class="Titulo">Escolha sua forma de pagamento!</h1>
@@ -46,3 +47,7 @@
    <a href="./carrinho_projeto.html"><button class="voltar"> Voltar </button></a>
     
 </template>
+
+<style scoped>
+@import url("~/assets/css/pagamento.css");
+</style>

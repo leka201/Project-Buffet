@@ -3,32 +3,33 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 100px;
      background-color: #F5F5F5;
   }
   
-  .login-wrapper {
+  .login-div {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 200px;
   }
   
-  .login-card {
-    background: #ffffff;
+  .login-div2 {
+    background: #9b49e9;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px   #6E32A6;
+    box-shadow: 3px 3px 3px   #6E32A6;
     width: 300px;
     text-align: center;
   }
   
   h1 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color:#6E32A6;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color:#F5F5F5;
   }
   
-  .input-container {
+  .input-conta {
     position: relative;
     margin-bottom: 1rem;
     width: 90%;
@@ -37,13 +38,13 @@ body {
   input {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #6E32A6;
+    border-radius: 11px;
     font-size: 1rem;
   }
   
   input:focus {
-    border-color: #007bff;
+    border-color: #6E32A6;
     outline: none;
   }
   
@@ -57,10 +58,10 @@ body {
     pointer-events: none;
   }
   
-  input:focus + label {
+  input:focus  label {
     top: -1rem;
     left: 0;
-    color: #007bff;
+    color: #6E32A6;
     font-size: 0.75rem;
   }
   
@@ -68,9 +69,9 @@ body {
     width: 100%;
     padding: 0.75rem;
     border: none;
-    border-radius: 4px;
-    background-color:#6E32A6;
-    color: white;
+    border-radius: 8px;
+    background-color:#68319b;
+    color: #F5F5F5;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.1s ease;
@@ -83,7 +84,7 @@ body {
   a {
     display: block;
     margin-top: 1rem;
-    color:#6E32A6;
+    color:#F5F5F5;
     text-decoration: none;
   }
   
