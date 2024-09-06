@@ -4,7 +4,7 @@
     <div class="login-div">
     <div class="login-div2">
       <h1>Login</h1>
-      <form action="index">
+      <form action="index.vue">
 
 
         <div class="input-conta">
