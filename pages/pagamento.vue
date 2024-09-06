@@ -3,7 +3,7 @@
      <!-- Pagina de pagamento-->
      <h1 class="Titulo">Escolha sua forma de pagamento!</h1>
 
-     <form action="./pagamento_aprovado.html">
+     <form action="./pagamento_aprovado.vue">
 
         <p class="cartão" ><strong >Escolha o Cartão</strong></p>
 
@@ -39,12 +39,12 @@
 
         
     
-       <a href="./revisao.html"> <button class="efetuarPagamento"> Efetuar pagamento</button> </a>
+       <a href="./pagamento_aprovado.vue"> <button class="efetuarPagamento"> Efetuar pagamento</button> </a>
 
    
     </form>
    
-   <a href="./carrinho_projeto.html"><button class="voltar"> Voltar </button></a>
+   <a href="./carrinho_projeto.vue"><button class="voltar"> Voltar </button></a>
     
 </template>
 

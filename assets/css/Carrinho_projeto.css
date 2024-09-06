@@ -8,25 +8,27 @@ body{
     background: #6E32A6;
     color: #F5F5F5;
     text-align: center;
-    padding: 20px;
+    padding: 8px;
     margin: 0;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 30px ;
 }
 
-img{
+.produto{
+    margin: auto;
+    text-align: center;
+}
+
+.produto img{
     border-radius: 100%;
-    
 }
 
 .Escritas{
-    text-align: center;
     font-size: 20px;
 }
 
-.Preço{
-    text-align: center;
+.Precos{
     font-size: 20px;
 }
 
@@ -69,4 +71,8 @@ img{
 .salvarContinuar:hover{
     background: lightgreen;
     color: black;
+}
+
+.btncentro{
+    text-align: center;
 }

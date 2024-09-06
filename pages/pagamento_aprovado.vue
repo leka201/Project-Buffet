@@ -9,7 +9,7 @@
 
     <br/>
 
-    <a href="index.html"> <button>Voltar </button> </a>
+    <a href="index.vue"> <button>Voltar </button> </a>
 </template>
 
 <style scoped>

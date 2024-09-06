@@ -77,5 +77,5 @@ R$100,0
 </template>
 
 <style scoped>
-@import url("~/assets/css/perfil.css");
+@import url("~/assets/css/Carrinho_projeto.css");
 </style>
