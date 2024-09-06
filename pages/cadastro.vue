@@ -34,13 +34,13 @@
         
         <label><p><strong>Informe genero:</strong></p>
 
-            <input type="checkbox"> Feminino <required>
+            <input type="checkbox" required> Feminino 
             <br/>
                 
-            <input type="checkbox"> Masculino <required>
+            <input type="checkbox" required> Masculino 
             <br/>
                     
-            <input type="checkbox"> Não informar <required>
+            <input type="checkbox" required> Não informar 
             <br/>
                         
         </label>
@@ -54,7 +54,7 @@
 
         <label> 
                         
-            <input type="checkbox"> Aceito os termos,pagar 50% antes da montagem <required>
+            <input type="checkbox"> Aceito os termos,pagar 50% antes da montagem 
             <br/>
             <input type="checkbox"> receber mensagem via sms
             <br/>
@@ -64,8 +64,8 @@
         </label>
         <br/>
 
-        
-        
+        <button>Salvar e voltar ao login</button>
+
     </form>
 
 </template>
