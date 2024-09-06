@@ -13,10 +13,13 @@
   <NuxtLink to="/cadastro">cadastro</NuxtLink>
 
   <NuxtLink to="/login">login</NuxtLink>
+  
 
+<NuxtLink to="/monte-sua-festa">monte o seu</NuxtLink>
 
+<NuxtLink to="/revisao">revise seu pedido</NuxtLink>
 
-
+<NuxtLink to="/recuperar-senha">recuperar sua senha</NuxtLink>
 
 
 </template>
