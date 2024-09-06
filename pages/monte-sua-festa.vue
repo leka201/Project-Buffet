@@ -1,6 +1,7 @@
 <script setup>
 
-import ('assets/css/monte-sua-festa.css')
+import ('~/assets/css/monte-sua-festa.css')
+import ('~/assets/css/animate.min.css')
 
 let lista = ref("tipo_festa")
 
@@ -51,7 +52,7 @@ function comida(){
 
             <div class="produtos">
 
-        <div v-if=" lista == 'tipo_festa'">
+        <div class=" animate__animated animate__fadeInLeft animate__faster" v-if=" lista == 'tipo_festa'">
             <p>Filtros:</p>
                 <input type="radio" name="objetivo"/>Festa Infantil
                 <input type="radio" name="objetivo"/>Festa Adolescente
@@ -59,7 +60,7 @@ function comida(){
 
         </div>
 
-        <div v-if=" lista == 'decoracao'">
+        <div class=" animate__animated animate__fadeInLeft animate__faster" v-if=" lista == 'decoracao'">
 
             <p>Filtros:</p>
                 <input type="radio" name="objetivo"/>Futebol
@@ -67,7 +68,7 @@ function comida(){
 
         </div>
 
-        <div v-if=" lista == 'itens_festa'">
+        <div class=" animate__animated animate__fadeInLeft" v-if=" lista == 'itens_festa'">
 
             <p>Filtros:</p>
                 <input type="radio" name="objetivo"/>Cadeiras e Mesas
@@ -75,7 +76,7 @@ function comida(){
 
         </div>
 
-        <div v-if=" lista == 'comida'">
+        <div class="animate__animated animate__fadeInLeft" v-if=" lista == 'comida'">
 
             <p>Filtros:</p>
                 <input type="radio" name="objetivo"/>Salgados
