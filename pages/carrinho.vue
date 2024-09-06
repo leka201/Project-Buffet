@@ -1,3 +1,4 @@
+
 <template>
     <div class="titulo">
     <h1>Carrinho:</h1>
@@ -56,3 +57,7 @@
     <button class="cancelar">Cancelar tudo</button>
     <a href="./pagamento.html"><button class="salvarContinuar">Salvar e continuar</button></a>
 </template>
+
+<style scoped>
+@import url("~/assets/css/Carrinho_projeto.css");
+</style>
