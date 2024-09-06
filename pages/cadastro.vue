@@ -1,6 +1,4 @@
-<script>
-import('/assets/css/cadastro.css')
-</script>
+
 
 
 <template>
@@ -74,3 +72,7 @@ import('/assets/css/cadastro.css')
     </form>
 
 </template>
+
+<style scoped>
+@import url("~/assets/css/cadastro.css");
+</style>

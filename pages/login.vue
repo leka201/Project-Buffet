@@ -1,6 +1,4 @@
-<script>
-import('/assets/css/loginnovo.css')
-</script>
+
 
 <template>
     <div class="login-wrapper">
@@ -27,3 +25,7 @@ import('/assets/css/loginnovo.css')
     </div>
   </div>
 </template>
+
+<style scoped>
+@import url("~/assets/css/login.css");
+</style>
