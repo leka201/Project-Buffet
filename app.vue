@@ -1,4 +1,5 @@
 <template>
+  
   <NuxtPage />
   <NuxtLink to="/">Inicio</NuxtLink>
   
