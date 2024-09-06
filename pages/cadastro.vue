@@ -1,3 +1,8 @@
+<script>
+import('/assets/css/cadastro.css')
+</script>
+
+
 <template>
      <form>
         <div>
