@@ -69,10 +69,6 @@
 <input type="radio" name="objetivo"/>Cadeiras e Mesas
 <input type="radio" name="objetivo"/>#####
 
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
 </template>
 
 
