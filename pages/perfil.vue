@@ -1,3 +1,5 @@
+
+
 <template>
    <div class="topo">
 
@@ -73,3 +75,7 @@ R$100,0
 
 <!-- <script src="./css awesome/font-awesome-v6.6.js"></script> -->
 </template>
+
+<style scoped>
+@import url("~/assets/css/Carrinho_projeto.css");
+</style>

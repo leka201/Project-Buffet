@@ -1,3 +1,16 @@
+<script setup>
+
+let linkSelecionado = ref('inicio')
+
+function alteraLinkSelecionado(valor) {
+    linkSelecionado.value = valor
+}
+
+
+</script>
+
+
+
 <template>
 
 <div class="bordaredonda">
@@ -15,15 +28,24 @@
 
 <h1>
     <strong>
-        EarlyBird   <a class="margin " href="futuro index.html"><button  class="persobtn">  Pagina inicial  </button> </a> 
-                    <a class="margin marginbtn" href="futuro index.html"><button  class="persobtn">  Mesas  </button> </a> 
-                    <a class="margin marginbtn" href="futuro index.html"><button  class="persobtn">  Decorações  </button> </a> 
-                    <a class="margin marginbtn" href="futuro index.html"><button  class="persobtn">  Comidas  </button> </a> 
-                    <a class="margin marginbtn " href="futuro index.html"><button  class="persobtn">  Doces  </button> </a> 
-                    <a class="margin marginbtn " href="futuro index.html"><button  class="persobtn">  Login  </button> </a> 
+        EarlyBird   <NuxtLink v-bind:class="['margin ' , linkSelecionado == 'inicio'?'ativo':'']" to="/" v-on:click="alteraLinkSelecionado('inicio')"><button  class="persobtn">  Pagina inicial  </button> </NuxtLink>
+                    <NuxtLink class="margin marginbtn" to="/" v-on:click="alteraLinkSelecionado('mesas')"><button  class="persobtn">  Mesas  </button> </NuxtLink>
+                    <NuxtLink class="margin marginbtn" to="/decorações"><button  class="persobtn">  Decorações  </button> </NuxtLink>
+                    <NuxtLink class="margin marginbtn" to="futuro index.html"><button  class="persobtn">  Comidas  </button> </NuxtLink>
+                    <NuxtLink class="margin marginbtn " to="futuro index.html"><button  class="persobtn">  Doces  </button> </NuxtLink>
+                    <NuxtLink class="margin marginbtn " to="/login"><button  class="persobtn">  Login  </button> </NuxtLink>
     </strong>
 </h1>
 
 </div>
 
 </template>
+
+<style  scoped>
+
+.ativo{
+
+    
+}
+
+</style>

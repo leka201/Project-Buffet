@@ -1,3 +1,4 @@
+
 <template>
     <!--Pós pagamento-->
     <h1>Pagamento Efetuado com sucesso!!🎉 </h1>
@@ -8,5 +9,9 @@
 
     <br/>
 
-    <a href="index.html"> <button>Voltar </button> </a>
+    <a href="index.vue"> <button>Voltar </button> </a>
 </template>
+
+<style scoped>
+@import url("~/assets/css/pagamento_aprovado.css");
+</style>

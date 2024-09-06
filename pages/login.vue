@@ -1,31 +1,28 @@
 
 
 <template>
-    <div class="login-wrapper">
-    <div class="login-card">
+    <div class="login-div">
+    <div class="login-div2">
       <h1>Login</h1>
-      <form>
+      <form action="index.vue">
 
 
-
-
-
-        <div class="input-container">
+        <div class="input-conta">
           <input type="email"  required>
           <label>E-mail</label>
         </div>
-        <div class="input-container">
+        <div class="input-conta">
           <input type="password" required>
           <label>Senha</label>
         </div>
-        <button type="submit">Entrar</button>
+        <button type="submit" a target="_blank" href="index.vue">Entrar</button>
         
-        <a target="_blank" href="cadastro.html">Criar uma conta</a>
+        <a target="_blank" href="cadastro.vue">Criar uma conta</a>
       </form>
     </div>
   </div>
 </template>
 
 <style scoped>
-@import url("~/assets/css/login.css");
+@import  url("~/assets/css/login.css");
 </style>
