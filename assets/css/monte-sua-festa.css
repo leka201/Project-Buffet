@@ -1,6 +1,48 @@
-body{
+body {
     background-color: #e6e7eb;
-    margin:0;
-    font-family: Arial;
+    margin: 0;
 }
 
+.container {
+    position: relative;
+    display: flex;
+    background: #6E32A6;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container > div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px; 
+}
+
+.produtos {
+    outline: none;
+    border: none;
+    color: #333;
+    border-radius: 8px;
+    background: #fff;
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color:#e6e7eb;
+}
+
+ul  .filha button {
+    margin-bottom: 10px;
+    border: none;
+    background:#6E32A6;
+    color: #e6e7eb;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
