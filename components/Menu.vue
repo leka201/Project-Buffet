@@ -1,5 +1,10 @@
 <script setup>
 
+
+
+
+
+
 let linkSelecionado = ref('inicio')
 
 function alteraLinkSelecionado(valor) {
@@ -23,19 +28,18 @@ function alteraLinkSelecionado(valor) {
                         </span>  
 </div>
 
-<div class="letraroxa fundobranco">
+<div class="letraroxa fundobranco menu">
 
 
-<h1>
-    <strong>
-        EarlyBird   <NuxtLink v-bind:class="['margin ' , linkSelecionado == 'inicio'?'ativo':'']" to="/" v-on:click="alteraLinkSelecionado('inicio')"><button  class="persobtn">  Pagina inicial  </button> </NuxtLink>
-                    <NuxtLink class="margin marginbtn" to="/" v-on:click="alteraLinkSelecionado('mesas')"><button  class="persobtn">  Mesas  </button> </NuxtLink>
-                    <NuxtLink class="margin marginbtn" to="/decorações"><button  class="persobtn">  Decorações  </button> </NuxtLink>
-                    <NuxtLink class="margin marginbtn" to="futuro index.html"><button  class="persobtn">  Comidas  </button> </NuxtLink>
-                    <NuxtLink class="margin marginbtn " to="futuro index.html"><button  class="persobtn">  Doces  </button> </NuxtLink>
-                    <NuxtLink class="margin marginbtn " to="/login"><button  class="persobtn">  Login  </button> </NuxtLink>
-    </strong>
-</h1>
+        <h1>    <font-awesome-icon :icon="['fas', 'envelope']" /> Jorges Buffet </h1>
+        <div>
+            <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'inicio'?'ativo':'']" to="/" v-on:click="alteraLinkSelecionado('inicio')"> Pagina inicial   </NuxtLink>
+            <NuxtLink class="margin marginbtn" to="/" v-on:click="alteraLinkSelecionado('mesas')"><button  class="persobtn">  Mesas  </button> </NuxtLink>
+            <NuxtLink class="margin marginbtn" to="/decorações"><button  class="persobtn">  Decorações  </button> </NuxtLink>
+            <NuxtLink class="margin marginbtn" to="futuro index.html"><button  class="persobtn">  Comidas  </button> </NuxtLink>
+            <NuxtLink class="margin marginbtn " to="futuro index.html"><button  class="persobtn">  Carrinho  </button> </NuxtLink>
+            <NuxtLink  v-bind:class="['margin ','persobtn' , linkSelecionado == 'login'?'ativo':'']" to="/login" v-on:click="alteraLinkSelecionado('login')">  Login   </NuxtLink>
+        </div>
 
 </div>
 
@@ -43,9 +47,5 @@ function alteraLinkSelecionado(valor) {
 
 <style  scoped>
 
-.ativo{
-
-    
-}
 
 </style>
