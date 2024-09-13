@@ -1,7 +1,6 @@
 <template>
     
-    
-    
+
     <div class="quadrado centerimg">
        
         
@@ -14,6 +13,9 @@
 
        
     </div>
+
+
+
 </template>
 
 <style scoped>
