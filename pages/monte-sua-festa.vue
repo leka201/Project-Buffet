@@ -3,29 +3,26 @@
     import ('~/assets/css/monte-sua-festa.css')
     import ('~/assets/css/animate.min.css')
 
-    let lista = ref("tipo_festa")
-
-    function tipo_festa(){
-
-        lista.value = "tipo_festa";
-
-    }
+    let lista = ref("decoracao")
 
     function decoracao(){
 
-        lista.value = "decoracao";
+        // lista.value = "decoracao";
+        lista.value = "true"
 
     }
 
     function itens_festa(){
 
         lista.value = "itens_festa";
+        lista.value = "true"
 
     }
 
     function comida(){
 
-        lista.value = "comida";
+        // lista.value = "comida";
+        lista.value = "true"
 
     }
 
@@ -35,7 +32,7 @@
 
     <div class="container">
 
-            <div>
+            <div class="lateral">
                 <ul>Monte seu evento:
 
                     <ul class="filha"><button v-on:click="decoracao()">Decoração</button></ul>
@@ -50,7 +47,7 @@
 
             <div class="produtos">
 
-                <div class=" animate__animated animate__fadeInLeft animate__faster" v-if=" lista == 'decoracao'">
+                <div class=" animate__animated animate__fadeInLeft animate__faster espaco" v-if=" lista == 'true & itens_festa'">
 
                     <p>Filtros:</p>
                         <input type="radio" name="objetivo"/>Futebol
@@ -58,9 +55,7 @@
 
                 </div>
                 
-                <Produtos/>
-
-                <div class=" animate__animated animate__fadeInLeft" v-if=" lista == 'itens_festa'">
+                <div class=" animate__animated animate__fadeInLeft" v-if=" lista == 'true'">
 
                     <p>Filtros:</p>
                         <input type="radio" name="objetivo"/>Cadeiras e Mesas
@@ -68,7 +63,7 @@
 
                 </div>
 
-                <div class="animate__animated animate__fadeInLeft" v-if=" lista == 'comida'">
+                <div class="animate__animated animate__fadeInLeft" v-if=" lista == ''">
 
                     <p>Filtros:</p>
                     <input type="radio" name="objetivo"/>Salgados
@@ -76,7 +71,11 @@
                     <input type="radio" name="objetivo"/>Bolos
 
                 </div>
-
+                <div v-if=" lista == 'true'" class="flex">
+                    <Mesa class="flex"/>
+                    <Mesa/>
+                </div>
+                
                
             </div>
 
