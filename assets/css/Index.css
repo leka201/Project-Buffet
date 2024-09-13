@@ -33,6 +33,7 @@
     
     .dist1{
         margin-left: 10px;
+    
     }
     
     .dist2{
@@ -64,7 +65,9 @@
         height: 60px;
         width: auto;
         border-radius: 150px;
-       
+        padding: 10px 30px;
+        display:inline;
+        justify-content: space-between;
     }
     
     .persobtn:hover {
@@ -74,8 +77,8 @@
     
         .margin{
     
-            margin-left: 750px;
             text-decoration: unset;
+            margin-left: 10px;
         }
     
         .marginbtn{
@@ -180,5 +183,24 @@
 
             background-color: #6E32A6; 
             color: #f0f1f1 ;
+            
+           
+        }
+        .ativo:hover {
+            background-color: #6E32A6; 
+            color: white;
+            cursor: pointer; }
+
+        .menu{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .spaceigual{
+
+            display: flex;
+            justify-content: space-between;
 
         }
