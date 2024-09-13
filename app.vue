@@ -11,7 +11,7 @@ import('~/assets/css/index.css')
 
 
   <Menu/>
-  <NuxtPage />
+  <NuxtPage/>
   
 
 
