@@ -65,7 +65,9 @@
         height: 60px;
         width: auto;
         border-radius: 150px;
-       padding: 10px 30px;
+        padding: 10px 30px;
+        display:inline;
+        justify-content: space-between;
     }
     
     .persobtn:hover {
@@ -76,6 +78,7 @@
         .margin{
     
             text-decoration: unset;
+            margin-left: 10px;
         }
     
         .marginbtn{

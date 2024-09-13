@@ -1,0 +1,117 @@
+.fundos {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+    background-color: blanchedalmond;
+    padding: 10px;
+    color: black;
+    gap: 10px;
+    border-radius: 150px;
+}
+
+.quadrado {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 550px;
+    text-align: center;
+    background-color: #6E32A6; /* Cor de fundo inicial do quadrado */
+    padding: 10px;
+    color: black;
+    gap: 10px;
+    border-radius: 35px;
+    border: 3px solid #6E32A6; /* Borda roxa constante */
+    position: relative; /* Para posicionar o texto e a parte inferior */
+    overflow: hidden; /* Garante que elementos não vaze do quadrado */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor de fundo e transformação */
+    margin-left: 250px;
+    
+ 
+}
+
+/* Efeito de animação quando o mouse está sobre o quadrado */
+.quadrado:hover {
+    transform: translateY(-10px); /* Move o quadrado para cima */
+}
+
+/* Texto que aparece dentro do quadrado ao passar o mouse */
+.texto {
+    display: flex; /* Flexbox para centralizar o texto */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px; /* Posiciona o texto dentro do quadrado */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o texto horizontalmente */
+    background-color: transparent; /* Remove qualquer fundo branco */
+    color: #6E32A6; /* Cor do texto */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas para o texto */
+    white-space: nowrap; /* Impede quebra de linha */
+    z-index: 1; /* Garante que o texto esteja sobre outros elementos */
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade do texto */
+    opacity: 0; /* Inicialmente oculto */
+    font-size: 25px;
+    cursor: pointer;
+    background-color: #f0f1f1;
+    margin-bottom: 25px;
+}
+
+/* Parte inferior que muda quando o mouse passa sobre o quadrado */
+.quadrado::after {
+    content: "";
+    position: absolute;
+    bottom: 15px; /* Posiciona a parte inferior abaixo do quadrado */
+    left: 0;
+    width: 100%;
+    height: 0; /* Altura inicial da parte inferior */
+    background-color: transparent; /* Inicialmente transparente */
+    transition: height 0.3s ease, background-color 0.3s ease; /* Transição suave para a altura e a cor de fundo */
+    z-index: 0; /* Fica atrás do texto */
+    border-radius: 150px;
+}
+
+/* Efeito ao passar o mouse sobre o quadrado */
+.quadrado:hover::after {
+    height: 35px; /* Aumenta a altura da parte inferior */
+    background-color: #6E32A6; /* Muda a cor de fundo da parte inferior para a cor do quadrado */
+}
+
+.quadrado:hover .texto {
+    opacity: 1; /* Torna o texto visível quando o mouse está sobre o quadrado */
+}
+
+.centerimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redonda {
+    border-radius: 25px;
+}
+
+.botao-comprar {
+    position: absolute;
+    bottom: 10px; /* Posiciona o botão dentro do quadrado */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    background-color: #6E32A6; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    z-index: 1; /* Garante que o botão esteja sobre outros elementos */
+}
+
+.textoimg{
+
+color: #f0f1f1;
+font-size: 25px;
+margin-top: -75px;
+
+}
+
+.coluna{
+    flex-direction:column
+}

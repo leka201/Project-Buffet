@@ -1,4 +1,34 @@
 <template>
+    
+    
+    <div class="flex">
 
-    <h1>Jorges</h1>
+        <Mesa/>
+        <Mesa/>
+
+    </div>
+
+ 
 </template>
+
+
+<style scoped>
+
+.flex{
+    display: flex;
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
