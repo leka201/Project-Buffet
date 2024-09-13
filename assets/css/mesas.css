@@ -27,6 +27,7 @@
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para a cor de fundo e transformação */
     margin-left: 250px;
     
+ 
 }
 
 /* Efeito de animação quando o mouse está sobre o quadrado */
@@ -109,4 +110,8 @@ color: #f0f1f1;
 font-size: 25px;
 margin-top: -75px;
 
+}
+
+.coluna{
+    flex-direction:column
 }
