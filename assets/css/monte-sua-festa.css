@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 20px; 
+    height: 756px;
 }
 
 .produtos {
@@ -45,4 +46,36 @@ ul  .filha button {
 
 input[type="radio"] {
     margin-right: 5px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction:column;
+    width: 200px;
+    background-color: #6E32A6;
+    margin-right: 20px;
+    color: #333;
+    gap: 10px;
+    border-radius: 10px;
+    
+}
+
+    button{
+    background-color: #fff;
+    width: 200px;
+    color: #333;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.lado{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #6E32A6;
+    margin-right: 20px;
+    color: #333;
+    gap: 10px;
+    border-radius: 10px;
 }
