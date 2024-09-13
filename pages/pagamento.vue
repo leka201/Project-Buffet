@@ -5,6 +5,7 @@
 
      <form action="./pagamento_aprovado.vue">
 
+      <div class="cartaoSelecionar">
         <p class="cartão" ><strong >Escolha o Cartão</strong></p>
 
         <select >
@@ -17,6 +18,7 @@
         <p class="pix"><strong>Pix:</strong></p>
 
         <button>Gerar QRCode</button>
+      </div>
 
        <div>
 
@@ -37,14 +39,17 @@
 
        </div>
 
-        
-    
+        <div class="cartaoSelecionar">
        <a href="./pagamento_aprovado.vue"> <button class="efetuarPagamento"> Efetuar pagamento</button> </a>
+         </div>
 
    
     </form>
    
+    <div class="cartaoSelecionar">
    <a href="./carrinho_projeto.vue"><button class="voltar"> Voltar </button></a>
+   </div>
+   
     
 </template>
 

@@ -1,35 +1,7 @@
 body{
     font-family: arial;
     background: #e6e7eb;
-    text-align: center;
-}
-
-.titulo{
-    background: #6E32A6;
-    color: #F5F5F5;
-    text-align: center;
-    padding: 8px;
-    margin: 0;
-    border-radius: 20px;
-    font-size: 15px;
-    margin-bottom: 30px ;
-}
-
-.produto{
-    margin: auto;
-    text-align: center;
-}
-
-.produto img{
-    border-radius: 100%;
-}
-
-.Escritas{
-    font-size: 20px;
-}
-
-.Precos{
-    font-size: 20px;
+    
 }
 
 .cancelar{
@@ -45,34 +17,40 @@ body{
     color: black;
 }
 
+.produto{
+    flex-direction: column;
+}
+
+.produto img{
+    border-radius: 100%;
+}
+
+.Escritas{
+    font-size: 20px;
+}
+
+.Precos{
+    font-size: 20px;
+}
+
+
+
 .carrinho{
     margin-bottom: 20px;
 }
 
-.salvarContinuarComprando{
-    background: lightyellow;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 30px;
-}
 
-.salvarContinuarComprando:hover{
-    background: yellow;
-}
 
-.salvarContinuar{
-    background: green;
-    cursor: pointer;
-    color: #F5F5F5;
-    font-size: 15px;
-    border-radius: 30px;
-}
 
-.salvarContinuar:hover{
-    background: lightgreen;
-    color: black;
-}
 
-.btncentro{
+.item{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
     text-align: center;
+    background-color: #6E32A6;
+    padding: 10px;
+    color:#e6e7eb;
+    gap:10px;
+    border-radius: 15px;
 }
