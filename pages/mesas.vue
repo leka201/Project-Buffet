@@ -1,14 +1,13 @@
 <template>
     
     
-    <div class="flex">
+    <div class="flex alinhacentro">
 
         <Mesa/>
         <Mesa/>
 
     </div>
 
- 
 </template>
 
 
@@ -16,9 +15,17 @@
 
 .flex{
     display: flex;
+    margin-left: 300px;
+
 }
 
+.alinhacentro{
 
+align-items: center;
+text-align: center;
+flex-direction:inherit
+
+}
 
 </style>
 

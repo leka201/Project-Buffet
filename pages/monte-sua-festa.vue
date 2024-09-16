@@ -3,7 +3,7 @@
     import ('~/assets/css/monte-sua-festa.css')
     import ('~/assets/css/animate.min.css')
 
-    const params = defineProps(["produtos"])
+    const params = defineProps(["produtos", "adicionaAoCarrinho"])
     console.log(params)
 
     let lista = ref("decoracao")
@@ -80,7 +80,7 @@
                 </div>
                 <div v-if=" lista == 'true'" class="flex">
 
-                    <Mesa class="flex" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
+                    <Mesa class="flex" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" v-bind:adicionaAoCarrinho="params.adicionaAoCarrinho" />
                     <Mesa class="flex" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
                     <Mesa class="flex" v-bind:produtos="params.produtos[2]" v-bind:disponivel="disponivel"/>
                     <Mesa class="flex" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>

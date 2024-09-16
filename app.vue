@@ -35,6 +35,10 @@ const produtos = reactive([
     },
 ])
 
+function adicionaAoCarrinho( produto ){
+    produtos.push(produto)
+}
+
 </script>
 
 
@@ -44,7 +48,7 @@ const produtos = reactive([
 
 
   <Menu/>
-  <NuxtPage v-bind:produtos="produtos"> </NuxtPage>
+  <NuxtPage v-bind:produtos="produtos" v-bind:adicionaAoCarrinho ="adicionaAoCarrinho"/>
   
 
 
