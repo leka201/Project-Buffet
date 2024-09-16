@@ -3,7 +3,7 @@
     import ('~/assets/css/monte-sua-festa.css')
     import ('~/assets/css/animate.min.css')
 
-    const params = defineProps(["produtos"])
+    const params = defineProps(["produtos", "adicionaAoCarrinho"])
     console.log(params)
 
     let lista = ref("decoracao")
