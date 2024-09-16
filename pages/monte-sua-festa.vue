@@ -4,6 +4,7 @@
     import ('~/assets/css/animate.min.css')
 
     const params = defineProps(["produtos"])
+    console.log(params)
 
     let lista = ref("decoracao")
     

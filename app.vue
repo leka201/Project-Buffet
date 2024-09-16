@@ -1,4 +1,4 @@
-<script>
+<script setup>
 
 import('~/assets/css/index.css')
 
@@ -44,7 +44,7 @@ const produtos = reactive([
 
 
   <Menu/>
-  <NuxtPage v-bind:produtos = "produtos"> </NuxtPage>
+  <NuxtPage v-bind:produtos="produtos"> </NuxtPage>
   
 
 
