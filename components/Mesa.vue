@@ -11,8 +11,8 @@ const params = defineProps (["produtos", "disponivel", "adicionaAoCarrinho"]);
 
     <div class="quadrado centerimg">
        
-        
-       <h1 class="textoimg">{{params.produtos.nome}} </h1> 
+    <h1 class="textoimg">{{params.produtos.nome}} </h1> 
+
 
         <img class="redonda " src="/public/img/mesas.png" width="300px" alt="Mesas">
 
