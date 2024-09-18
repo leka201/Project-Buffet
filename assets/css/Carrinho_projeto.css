@@ -17,10 +17,6 @@ body{
     color: black;
 }
 
-.produto{
-    flex-direction: column;
-}
-
 .produto img{
     border-radius: 100%;
 }
@@ -33,8 +29,6 @@ body{
     font-size: 20px;
 }
 
-
-
 .carrinho{
     margin-bottom: 20px;
 }
@@ -42,9 +36,8 @@ body{
 .item{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 200px;
     text-align: center;
-    background-color: #6E32A6;
     padding: 10px;
     color:#e6e7eb;
     gap:10px;

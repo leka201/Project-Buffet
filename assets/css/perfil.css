@@ -4,7 +4,7 @@ body{
     text-align: center;
     }
     
-div{
+.divisao{
     background: #6E32A6;
     color:#F5F5F5;
     text-align: center;
@@ -37,25 +37,25 @@ div{
 }
 
 .lado_a_lado{
-    display: flex;
-    justify-content: center;
-    background: #e6e7eb;
-    color: black;
     align-items: center;
-    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: center;
+    width: 300px;
+    text-align: center;
+    background-color: #ae82da;
+    padding: 10px;
+    color:#e6e7eb;
+    gap:10px;
+    border-radius: 20px;
+    text-align: center;
+    
 }
 .voltar{
     display: flex;
     align-items: start;
 }
 
-.wrapper{
-    position: fixed;
-  }
-  
-  .link_wrapper{
-    position: relative;
-  }
   
   .botao{
     display: block;
@@ -107,4 +107,9 @@ div{
     right: -25%;
   }
 
+  .center{
+    text-align: center;
+  }
+
+  
   
