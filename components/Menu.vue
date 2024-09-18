@@ -34,9 +34,7 @@ function alteraLinkSelecionado(valor) {
         <h1>    <font-awesome-icon :icon="['fas', 'envelope']" /> Jorges Buffet </h1>
         <div>
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'inicio'?'ativo':'']" to="/" v-on:click="alteraLinkSelecionado('inicio')"> Pagina inicial   </NuxtLink>
-            <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'mesas'?'ativo':'']" to="/monte-sua-festa" v-on:click="alteraLinkSelecionado('mesas')">  Mesas   </NuxtLink>
-            <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'decorações'?'ativo':'']" to="/decoracoes" v-on:click="alteraLinkSelecionado('decorações')">  Decorações  </NuxtLink>
-            <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'comidas'?'ativo':'']" to="/comidas" v-on:click="alteraLinkSelecionado('comidas')"> Comidas   </NuxtLink>
+            <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'mesas'?'ativo':'']" to="/monte-sua-festa" v-on:click="alteraLinkSelecionado('mesas')">  Monte Sua festa   </NuxtLink>
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'Carrinho'?'ativo':'']" to="/carrinho" v-on:click="alteraLinkSelecionado('Carrinho')">  Carrinho  </NuxtLink> 
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'login'?'ativo':'']" to="/login" v-on:click="alteraLinkSelecionado('login')">  Login   </NuxtLink>
         </div>
