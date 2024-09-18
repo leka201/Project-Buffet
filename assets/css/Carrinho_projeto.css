@@ -35,8 +35,7 @@ body{
 
 .item{
     display: flex;
-    flex-direction: column;
-    width: 200px;
+    
     text-align: center;
     padding: 10px;
     color:#e6e7eb;
