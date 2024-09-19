@@ -8,40 +8,24 @@ const params = defineProps(["produtos"]);
 
     <div class="titulo">
         <h1>Carrinho:</h1>
-        
     </div>
 
 
-    <div class="produto item">
+    <div class=" item">
     
     <Mesa v-bind:produtos="produtos[0]" />
     <Mesa v-bind:produtos="produtos[1]" />
     <Mesa v-bind:produtos="produtos[2]" />
     
-    <p>Quantidade por cento: <span id="quant.">0</span> </p>
+   <!--<p>Quantidade por cento: <span id="quant.">0</span> </p>
 
     <button onclick='aumentar() '>Adicionar</button>
     <button onclick='diminuir()'>Diminuir</button>
-    <button class="cancelar">Cancelar</button>
+    <button class="cancelar">Cancelar</button>--> 
 
 </div>
 
 <br/>
-
-<div class="produto item">
-
-
-
-<p>Limite: 1</p>
-<button class="cancelar">Cancelar</button>
-</div>
-
-
-
-
-
-
-
 
 <hr class="carrinho">
 
@@ -58,7 +42,6 @@ const params = defineProps(["produtos"]);
 .display{
     display: flex;
     gap:15px;
-    justify-content: center;
 }
 
 .titulo{

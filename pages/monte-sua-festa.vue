@@ -63,6 +63,15 @@
                         <input type="radio" name="objetivo"/>Futebol
                         <input type="radio" name="objetivo"/>#####
 
+                        <div class="flex">
+
+                            <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
+                            <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
+                            <Mesa class="flex" v-if="produtos_festa == 'itens_festa'" v-bind:produtos="params.produtos[2]" v-bind:disponivel="disponivel"/>
+                            <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>
+                            <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[4]" v-bind:disponivel="disponivel"/>
+
+                        </div>
                 </div>
                 
                 <div class=" animate__animated animate__fadeInLeft" v-if=" lista == 'itens_festa'">
@@ -71,6 +80,15 @@
                         <input type="radio" name="objetivo"/>Cadeiras e Mesas
                         <input type="radio" name="objetivo"/>#####
 
+                        <div class="flex">
+
+                        <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
+                        <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
+                        <Mesa class="flex" v-if="produtos_festa == 'itens_festa'" v-bind:produtos="params.produtos[2]" v-bind:disponivel="disponivel"/>
+                        <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>
+                        <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[4]" v-bind:disponivel="disponivel"/>
+
+                        </div>
                 </div>
 
                 <div class="animate__animated animate__fadeInLeft" v-if=" lista == 'comida'">
@@ -80,8 +98,8 @@
                     <input type="radio" name="objetivo"/>Refrigerantes
                     <input type="radio" name="objetivo"/>Bolos
 
-                </div>
-                <div class="flex">
+                <!-- </div> -->
+                    <div class="flex">
 
                     <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
                     <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
@@ -89,11 +107,12 @@
                     <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>
                     <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[4]" v-bind:disponivel="disponivel"/>
                 
-                </div>
+                    </div>
                 
                
-            </div>
+                </div>
 
+        </div>
     </div>
 
 </template>
