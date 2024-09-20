@@ -39,8 +39,6 @@ body{
 .lado_a_lado{
     align-items: center;
     margin-top: 10px;
-    display: flex;
-    flex-direction: center;
     width: 300px;
     text-align: center;
     background-color: #ae82da;
@@ -48,7 +46,6 @@ body{
     color:#e6e7eb;
     gap:10px;
     border-radius: 20px;
-    text-align: center;
     
 }
 .voltar{
