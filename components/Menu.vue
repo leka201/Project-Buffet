@@ -31,7 +31,7 @@ function alteraLinkSelecionado(valor) {
 <div class="letraroxa fundobranco menu">
 
 
-        <h1>    <font-awesome-icon :icon="['fas', 'envelope']" /> Jorges Buffet </h1>
+        <h1>    <font-awesome-icon :icon="['fas', 'envelope']" /> <img class="margin2" src="/public/img/Logo soul fest.jpg" width="120px"> </h1>
         <div>
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'inicio'?'ativo':'']" to="/" v-on:click="alteraLinkSelecionado('inicio')"> Pagina inicial   </NuxtLink>
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'mesas'?'ativo':'']" to="/monte-sua-festa" v-on:click="alteraLinkSelecionado('mesas')">  Monte Sua festa   </NuxtLink>
@@ -44,6 +44,7 @@ function alteraLinkSelecionado(valor) {
 </template>
 
 <style  scoped>
+
 
 
 </style>
