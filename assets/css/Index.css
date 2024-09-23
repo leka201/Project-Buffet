@@ -196,11 +196,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 120px;
         }
 
         .spaceigual{
 
             display: flex;
             justify-content: space-between;
+
+        }
+
+        .logo{
+
+            position: absolute;
 
         }

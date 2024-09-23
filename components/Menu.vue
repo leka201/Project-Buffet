@@ -20,7 +20,7 @@ function alteraLinkSelecionado(valor) {
 
 <div class="bordaredonda">
 
-<span class="fundoroxo "> <i class="fa-solid fa-location-dot distpalavras ">   </i> <spam class="dist1">R. Episcopal, 700 - Centro, São Carlos - SP, 13560-570   </spam>   
+<span class="fundoroxo "> <i class="fa-solid fa-location-dot distpalavras ">   </i> <spam class="dist1"> R. Episcopal, 700 - Centro, São Carlos - SP, 13560-570   </spam>   
     
                          <i class="fa-solid fa-phone dist2 "></i> <span class="dist1"> +55 16 992448042 </span>
                          <i class="fa-solid fa-envelope dist2"></i> <span class="dist1"> mateusbahia@gmail.com</span> 
@@ -31,7 +31,8 @@ function alteraLinkSelecionado(valor) {
 <div class="letraroxa fundobranco menu">
 
 
-        <h1>    <font-awesome-icon :icon="['fas', 'envelope']" /> <img class="margin2" src="/public/img/Logo soul fest.jpg" width="120px"> </h1>
+        <h1 class="logo">    <font-awesome-icon :icon="['fas', 'envelope']" /> <img class="margin2" src="/public/img/Logo soul fest.png" width="120px"> </h1>
+        <div></div>
         <div>
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'inicio'?'ativo':'']" to="/" v-on:click="alteraLinkSelecionado('inicio')"> Pagina inicial   </NuxtLink>
             <NuxtLink v-bind:class="['margin ','persobtn' , linkSelecionado == 'mesas'?'ativo':'']" to="/monte-sua-festa" v-on:click="alteraLinkSelecionado('mesas')">  Monte Sua festa   </NuxtLink>

@@ -21,10 +21,19 @@ export default {
 <h1 class="text"> </h1>
 
 
-
 </div>
 
-<div>
+<h1 class="montada">Sua festa montada</h1>
+
+
+
+
+
+
+
+
+
+<div class="distancia">
     
      <SobreNos />
 
@@ -48,5 +57,18 @@ export default {
   padding: 50px;
 }
 
+.distancia{
+
+margin-top: 300px;
+
+}
+
+.montada{
+background-color: #6E32A6;
+color: white;
+border-radius: 150px;
+padding-left: 30px;
+size: 200px;
+}
 
 </style>
