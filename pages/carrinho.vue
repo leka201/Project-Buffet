@@ -6,16 +6,16 @@ const params = defineProps(["produtos"]);
 
 <template>
 
+<div class="sombra">
     <div class="titulo">
         <h1>Carrinho:</h1>
     </div>
+</div>
 
 
     <div class=" item">
     
-    <Mesa v-bind:produtos="produtos[0]" />
-    <Mesa v-bind:produtos="produtos[1]" />
-    <Mesa v-bind:produtos="produtos[2]" />
+        <Mesa v-for="produto in produtos" v-bind:produtos="produto" />
     
    <!--<p>Quantidade por cento: <span id="quant.">0</span> </p>
 
@@ -23,7 +23,7 @@ const params = defineProps(["produtos"]);
     <button onclick='diminuir()'>Diminuir</button>
     <button class="cancelar">Cancelar</button>--> 
 
-</div>
+    </div>
 
 <br/>
 
@@ -48,11 +48,17 @@ const params = defineProps(["produtos"]);
     background: #6E32A6;
     color: #F5F5F5;
     text-align: center;
-    padding: 8px;
+    padding: 0px;
     margin: 0;
     border-radius: 20px;
     font-size: 15px;
-    margin-bottom: 30px ;
+    margin-bottom: 20px ;
+}
+.sombra{
+    padding: 0px;
+    background-color: #f8f8f8;
+    border-radius: 20px; /* Bordas arredondadas (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Horizontal, vertical, desfoque, cor */
 }
 
 .btncentro{

@@ -2,16 +2,18 @@ body{
     font-family: arial;
     background: #e6e7eb;
     text-align: center;
+    margin: 0;
+    padding: 0;
     }
     
 .divisao{
     background: #6E32A6;
     color:#F5F5F5;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
     margin: 0;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 30px ;
 }
 
@@ -48,6 +50,23 @@ body{
     border-radius: 20px;
     
 }
+
+.informacao{
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.inform{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 1000px;
+}
+
 .voltar{
     display: flex;
     align-items: start;
@@ -104,8 +123,26 @@ body{
     right: -25%;
   }
 
-  .center{
-    text-align: center;
+  .img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border: 3px solid #6a0dad;
+    margin-bottom: 60px;
+  }
+  .center h2{
+    margin: 0 0 10px;
+    font-size: 26px;
+  }
+
+  .center p{
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  .meio{
+    margin-bottom: 30px;
   }
 
   

@@ -4,33 +4,41 @@
 <h1>Meu Perfil</h1>
 </div>
 
+<div class="informacao ">
+    <div class="inform ">
+        <div class=" img perfil">
 
-<div class="perfil">
+            <i class="fa-solid fa-user" ></i>
 
-<i class="fa-solid fa-user" ></i>
+        </div>
 
 
+        <div class="center meio">
+            <h2><strong>Ana Clara Souza Camargo</strong> </h2>
+
+            <hr>
+
+            <h2>Informações Pessoais:</h2>
+
+            <p><strong>E-mail: </strong>anaclasouza005@gmail.com</p>
+            <p><strong>Data de nascimento: </strong> 08/11/2005</p>
+            <p><strong>Endereço: </strong>Av. João Stella, 480, Romeu Tortorelli</p>
+            <p><strong>Cartão: </strong>nupay</p>
+            <a href="./minha-conta.html"><button>Alterar</button></a>
+        </div>
+
+
+
+    </div>
 </div>
 
-<div class="center">
-<p>Ana Clara Souza Camargo</p>
 
-<hr>
-
-<h2>Informações Pessoais:</h2>
-
-<p><strong>E-mail: </strong>anaclasouza005@gmail.com</p>
-<p><strong>Data de nascimento: </strong> 08/11/2005</p>
-<p><strong>Endereço: </strong>Av. João Stella, 480, Romeu Tortorelli</p>
-<p><strong>Cartão: </strong>nupay</p>
-
-<a href="./minha-conta.html"><button>Alterar</button></a>
 
 
 <hr>
 
 <h3>Últimas compras:</h3>
-</div>
+
 
 <div class="lado_a_lado">
 <img class="imagem" src="https://i0.wp.com/anamariabraga.globo.com/wp-content/uploads/2017/12/coxinha-cremosa.jpg?fit=1200%2C675&ssl=1" width="90" height="90">

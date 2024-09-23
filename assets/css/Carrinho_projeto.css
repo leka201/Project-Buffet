@@ -17,28 +17,16 @@ body{
     color: black;
 }
 
-.produto img{
-    border-radius: 100%;
-}
-
-.Escritas{
-    font-size: 20px;
-}
-
-.Precos{
-    font-size: 20px;
-}
-
 .carrinho{
     margin-bottom: 20px;
 }
 
 .item{
     display: flex;
-    
     text-align: center;
     padding: 10px;
     color:#e6e7eb;
     gap:10px;
     border-radius: 15px;
+    flex-wrap: wrap;
 }
