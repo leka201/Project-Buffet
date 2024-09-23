@@ -16,7 +16,7 @@
                 </div>
                 <button type="submit">Entrar</button>
             </form>
-            <a href=",">Não tem conta?crie aqui</a>
+            <a href="cadastro">Não tem conta?crie aqui</a>
         </div>
     </div>
 
