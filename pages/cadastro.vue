@@ -54,7 +54,7 @@
                 </div>
                 
                 <button type="submit">Cadastrar</button>
-                <a href="#">Já possui conta? Entrar</a> 
+                <a href="login">Já possui conta? Entrar</a> 
             </form>
         </div>
     </div>
