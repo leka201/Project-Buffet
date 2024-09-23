@@ -66,11 +66,7 @@
                         <div class="flex">
 
                             <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
-                            <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
-                            <Mesa class="flex" v-if="produtos_festa == 'itens_festa'" v-bind:produtos="params.produtos[2]" v-bind:disponivel="disponivel"/>
-                            <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>
-                            <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[4]" v-bind:disponivel="disponivel"/>
-
+                            
                         </div>
                 </div>
                 
@@ -83,11 +79,7 @@
                         <div class="flex">
 
                         <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
-                        <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
-                        <Mesa class="flex" v-if="produtos_festa == 'itens_festa'" v-bind:produtos="params.produtos[2]" v-bind:disponivel="disponivel"/>
-                        <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>
-                        <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[4]" v-bind:disponivel="disponivel"/>
-
+                    
                         </div>
                 </div>
 
@@ -102,11 +94,7 @@
                     <div class="flex">
 
                     <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[0]" v-bind:disponivel="disponivel" />
-                    <Mesa class="flex" v-if="produtos_festa == 'decoracao'" v-bind:produtos="params.produtos[1]" v-bind:disponivel="disponivel"/>
-                    <Mesa class="flex" v-if="produtos_festa == 'itens_festa'" v-bind:produtos="params.produtos[2]" v-bind:disponivel="disponivel"/>
-                    <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[3]" v-bind:disponivel="disponivel"/>
-                    <Mesa class="flex" v-if="produtos_festa == 'comida'" v-bind:produtos="params.produtos[4]" v-bind:disponivel="disponivel"/>
-                
+                   
                     </div>
                 
                

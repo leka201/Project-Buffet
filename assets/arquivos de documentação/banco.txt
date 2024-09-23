@@ -1,0 +1,73 @@
+[
+    { "id": 0, "nome": "Decoração de Futebol", "preco": "R$50,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 1, "nome": "Balões de Futebol", "preco": "R$30,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 2, "nome": "Painel de Futebol", "preco": "R$100,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "Festa Infantil" },
+    { "id": 3, "nome": "Cestas de Pipas Coloridas", "preco": "R$40,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 4, "nome": "Guirlandas de Futebol", "preco": "R$25,00", "tipo": "Decoração", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+
+    { "id": 5, "nome": "Pipoca em Caixinhas", "preco": "R$20,00", "tipo": "Comida", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 6, "nome": "Mini Hot Dogs", "preco": "R$40,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 7, "nome": "Cupcakes Decorados", "preco": "R$60,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 8, "nome": "Biscoitos Decorados", "preco": "R$35,00", "tipo": "Comida", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 9, "nome": "Suco de Frutas", "preco": "R$25,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+
+    { "id": 10, "nome": "Mesa de Princesas", "preco": "R$80,00", "tipo": "Mesa", "dimensão": "M", "alugado": true, "ocasião": "Festa Infantil" },
+    { "id": 11, "nome": "Toalha de Mesa Infantil", "preco": "R$20,00", "tipo": "Mesa", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 12, "nome": "Pratos e Copos Coloridos", "preco": "R$15,00", "tipo": "Mesa", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 13, "nome": "Talheres de Plástico", "preco": "R$10,00", "tipo": "Mesa", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 14, "nome": "Cadeira Infantil", "preco": "R$25,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Festa Infantil" },
+
+    { "id": 15, "nome": "Arranjo de Flores para 15 Anos", "preco": "R$120,00", "tipo": "Decoração", "dimensão": "L", "alugado": false, "ocasião": "15 Anos" },
+    { "id": 16, "nome": "Painel de LED Personalizado", "preco": "R$200,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "15 Anos" },
+    { "id": 17, "nome": "Cortina de Luzes", "preco": "R$80,00", "tipo": "Decoração", "dimensão": "M", "alugado": true, "ocasião": "15 Anos" },
+    { "id": 18, "nome": "Balcão de Recepção", "preco": "R$150,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "15 Anos" },
+    { "id": 19, "nome": "Centro de Mesa com Velas", "preco": "R$50,00", "tipo": "Decoração", "dimensão": "P", "alugado": false, "ocasião": "15 Anos" },
+
+    { "id": 20, "nome": "Mini Sanduíches Gourmet", "preco": "R$70,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "15 Anos" },
+    { "id": 21, "nome": "Mousse de Maracujá", "preco": "R$45,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "15 Anos" },
+    { "id": 22, "nome": "Brigadeiros Gourmet", "preco": "R$55,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "15 Anos" },
+    { "id": 23, "nome": "Torta de Frutas", "preco": "R$60,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "15 Anos" },
+    { "id": 24, "nome": "Bebidas Elegantes", "preco": "R$40,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "15 Anos" },
+
+    { "id": 25, "nome": "Mesa de Casamento", "preco": "R$250,00", "tipo": "Mesa", "dimensão": "L", "alugado": true, "ocasião": "Casamento" },
+    { "id": 26, "nome": "Toalha de Mesa de Linho", "preco": "R$80,00", "tipo": "Mesa", "dimensão": "L", "alugado": false, "ocasião": "Casamento" },
+    { "id": 27, "nome": "Pratos de Porcelana", "preco": "R$50,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Casamento" },
+    { "id": 28, "nome": "Talheres de Prata", "preco": "R$60,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Casamento" },
+    { "id": 29, "nome": "Cadeiras de Veludo", "preco": "R$100,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Casamento" },
+
+    { "id": 30, "nome": "Decoração de Aniversário", "preco": "R$50,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 31, "nome": "Bandeirinhas Coloridas", "preco": "R$25,00", "tipo": "Decoração", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 32, "nome": "Painel de Circo", "preco": "R$120,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "Festa Infantil" },
+    { "id": 33, "nome": "Arcos de Balões", "preco": "R$70,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "Festa Infantil" },
+    { "id": 34, "nome": "Decoração de Dinossauro", "preco": "R$60,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+
+    { "id": 35, "nome": "Mini Pizza", "preco": "R$50,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 36, "nome": "Gelatina Colorida", "preco": "R$30,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 37, "nome": "Chocolates Sortidos", "preco": "R$40,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 38, "nome": "Sanduíches Naturais", "preco": "R$45,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 39, "nome": "Frutas em Palito", "preco": "R$35,00", "tipo": "Comida", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+
+    { "id": 40, "nome": "Decoração de Casamento com Flores", "preco": "R$150,00", "tipo": "Decoração", "dimensão": "L", "alugado": false, "ocasião": "Casamento" },
+    { "id": 41, "nome": "Cortina de Flores", "preco": "R$100,00", "tipo": "Decoração", "dimensão": "M", "alugado": true, "ocasião": "Casamento" },
+    { "id": 42, "nome": "Arranjo de Mesas", "preco": "R$80,00", "tipo": "Decoração", "dimensão": "P", "alugado": false, "ocasião": "Casamento" },
+    { "id": 43, "nome": "Mesa de Doces Elegantes", "preco": "R$180,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "Casamento" },
+    { "id": 44, "nome": "Luzes de Cristal", "preco": "R$90,00", "tipo": "Decoração", "dimensão": "M", "alugado": true, "ocasião": "Casamento" },
+
+    { "id": 45, "nome": "Bolo de Casamento", "preco": "R$300,00", "tipo": "Comida", "dimensão": "L", "alugado": false, "ocasião": "Casamento" },
+    { "id": 46, "nome": "Taças de Champagne", "preco": "R$50,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Casamento" },
+    { "id": 47, "nome": "Tábua de Queijos", "preco": "R$120,00", "tipo": "Comida", "dimensão": "L", "alugado": false, "ocasião": "Casamento" },
+    { "id": 48, "nome": "Mini Espetinhos", "preco": "R$60,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Casamento" },
+    { "id": 49, "nome": "Mousse de Chocolate", "preco": "R$50,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Casamento" },
+
+    { "id": 50, "nome": "Mesa de Buffet", "preco": "R$220,00", "tipo": "Mesa", "dimensão": "L", "alugado": true, "ocasião": "Casamento" },
+    { "id": 51, "nome": "Cadeira de Casamento com Almofada", "preco": "R$70,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Casamento" },
+    { "id": 52, "nome": "Toalha de Mesa de Seda", "preco": "R$90,00", "tipo": "Mesa", "dimensão": "L", "alugado": false, "ocasião": "Casamento" },
+    { "id": 53, "nome": "Pratos de Cristal", "preco": "R$75,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Casamento" },
+    { "id": 54, "nome": "Talheres de Ouro", "preco": "R$85,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Casamento" },
+
+    { "id": 55, "nome": "Mesa de Aniversário com Tema", "preco": "R$70,00", "tipo": "Mesa", "dimensão": "M", "alugado": true, "ocasião": "Festa Infantil" },
+    { "id": 56, "nome": "Cadeira Infantil com Encosto", "preco": "R$30,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Festa Infantil" },
+    { "id": 57, "nome": "Toalha de Mesa Personalizada", "preco": "R$25,00", "tipo": "Mesa", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 58, "nome": "Pratos e Copos Temáticos", "preco": "R$20,00", "tipo": "Mesa", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" },
+    { "id": 59, "nome": "Talheres Infantis", "preco": "R$15,00", "tipo": "Mesa", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" }
+]
