@@ -18,10 +18,10 @@
           <!-- Itens da Festa Infantil -->
         </ul>
         <div class="combo-card luxe-card">
-          <img src="/public/img/mesas.jpg" width="200px">
-          <h3>Combo Luxo</h3>
+          <img src="/public/img/Festa infanto.jpg" width="200px">
+          <h3>Combo Infantil</h3>
           <p>Inclui: Buffet completo, decoração temática, e DJ ao vivo.</p>
-          <span class="price">R$ 2.500</span>
+          <span class="price">R$ 3.400</span>
           <div class="button-container">
             <button class="btn">Comprar</button>
           </div>
@@ -32,10 +32,12 @@
     <div class="combo" @click="toggleItems('casamento')">
       <h2>Casamento</h2>
       <div class="items" id="casamento">
+       
         <div class="combo-card">
-          <h3>Combo Premium</h3>
-          <p>Inclui: Buffet gourmet, fotógrafo e open bar.</p>
-          <span class="price">R$ 3.500</span>
+           <img src="/public/img/Festa infanto.jpg" width="200px">
+          <h3>Combo Casamento </h3>
+          <p>Inclui: Buffet gourmet, dj,  open bar. decoração</p>
+          <span class="price">R$ 5.500</span>
           <div class="button-container">
             <button class="btn">Comprar</button>
           </div>
@@ -44,10 +46,12 @@
     </div>
 
     <div class="combo" @click="toggleItems('formatura')">
+     
       <h2>Formatura</h2>
       <div class="items" id="formatura">
-        <div class="combo-card">
-          <h3>Combo Standard</h3>
+        <div class="combo-card"> 
+          <img src="/public/img/Festa infanto.jpg" width="200px">
+          <h3>Combo Fromatura </h3>
           <p>Inclui: Buffet simples e música ambiente.</p>
           <span class="price">R$ 1.500</span>
           <div class="button-container">
