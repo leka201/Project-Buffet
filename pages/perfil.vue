@@ -41,28 +41,28 @@
 
 
 <div class="lado_a_lado">
-<img class="imagem" src="https://i0.wp.com/anamariabraga.globo.com/wp-content/uploads/2017/12/coxinha-cremosa.jpg?fit=1200%2C675&ssl=1" width="90" height="90">
+    <img class="imagem" src="https://i0.wp.com/anamariabraga.globo.com/wp-content/uploads/2017/12/coxinha-cremosa.jpg?fit=1200%2C675&ssl=1" width="90" height="90">
 
-<p>Salgado frito, pequeno, 600 unidades, 
-R$300,0
-</p>
+    <p>Salgado frito, pequeno, 600 unidades, 
+    R$300,0
+    </p>
 </div>
 
 <div class="lado_a_lado">
-<img class="imagem" src="https://http2.mlstatic.com/D_NQ_NP_861529-MLB49580616668_042022-O.webp" width="90" height="90">
+    <img class="imagem" src="https://http2.mlstatic.com/D_NQ_NP_861529-MLB49580616668_042022-O.webp" width="90" height="90">
 
-<p>Decoração de festa infantil, do sonic
-R$200,0
-</p>
+    <p>Decoração de festa infantil, do sonic
+    R$200,0
+    </p>
 </div>
 
 <div class="lado_a_lado">
-<img class="imagem" src="https://moveislinhares.vteximg.com.br/arquivos/ids/222952-430-430/Conjunto
--TopPlast-com-Mesas-de-Plastico-Top-e-6-Cadeiras-Valentina-na-cor-Branco---2.jpg" width="90" height="90">
+    <img class="imagem" src="https://moveislinhares.vteximg.com.br/arquivos/ids/222952-430-430/Conjunto
+    -TopPlast-com-Mesas-de-Plastico-Top-e-6-Cadeiras-Valentina-na-cor-Branco---2.jpg" width="90" height="90">
 
-<p>Conjunto de cadeira e mesa de plástico, 10 unidades,
-R$100,0
-</p>
+    <p>Conjunto de cadeira e mesa de plástico, 10 unidades,
+    R$100,0
+    </p>
 </div>
 
 <!-- <script src="./css awesome/font-awesome-v6.6.js"></script> -->
