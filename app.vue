@@ -46,7 +46,7 @@ function adicionaAoCarrinho( produto ){
   
 
 
-
+    <Head>        <Script src="./assets/js/font-awesome-v6.6.js"></Script>    </Head>
   <Menu/>
   <NuxtPage v-bind:produtos="produtos" v-bind:adicionaAoCarrinho ="adicionaAoCarrinho"/>
   
