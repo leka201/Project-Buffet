@@ -10,9 +10,9 @@
 
         <select >
             <option> Visa </option> 
-             <option> Mastercard</option>
-             <option> Elo </option>
-             <option>Nupay</option>
+            <option> Mastercard</option>
+            <option> Elo </option>
+            <option>Nupay</option>
         </select>
 
         <p class="pix"><strong>Pix:</strong></p>
@@ -39,16 +39,16 @@
 
        </div>
 
-        <div class="cartaoSelecionar">
+      <div class="cartaoSelecionar">
        <a href="./pagamento_aprovado.vue"> <button class="efetuarPagamento"> Efetuar pagamento</button> </a>
-         </div>
+      </div>
 
    
     </form>
    
     <div class="cartaoSelecionar">
-   <a href="./carrinho_projeto.vue"><button class="voltar"> Voltar </button></a>
-   </div>
+      <a href="./carrinho_projeto.vue"><button class="voltar"> Voltar </button></a>
+    </div>
    
     
 </template>
