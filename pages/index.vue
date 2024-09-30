@@ -4,228 +4,167 @@
   </div>
 
   <div class="container distanciateoe">
-    <!-- Módulo: Cabeçalho -->
     <div class="header">
-      <h1>Combos de Festa</h1>
-      <br>
+      <h1 class="combo-title">Combos de Festa</h1> <!-- Adicionada a classe combo-title -->
     </div>
 
-    <!-- Módulo: Combos -->
-    <div class="combo" @click="toggleItems('infantil')">
-      <h2>Festa Infantil</h2>
-      <div class="items" id="infantil">
-        <ul>
-          <!-- Itens da Festa Infantil -->
-        </ul>
-        <div class="combo-card luxe-card">
-          <img src="/public/img/Festa infanto.jpg" width="200px">
-          <h3>Combo Infantil</h3>
-          <p>Inclui: Buffet completo, decoração temática, e DJ ao vivo.</p>
-          <span class="price">R$ 3.400</span>
-          <div class="button-container">
-            <button class="btn">Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="combo" @click="toggleItems('casamento')">
-      <h2>Casamento</h2>
-      <div class="items" id="casamento">
-       
-        <div class="combo-card">
-           <img src="/public/img/Festa infanto.jpg" width="200px">
-          <h3>Combo Casamento </h3>
-          <p>Inclui: Buffet gourmet, dj,  open bar. decoração</p>
-          <span class="price">R$ 5.500</span>
-          <div class="button-container">
-            <button class="btn">Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="combo" @click="toggleItems('formatura')">
-     
-      <h2>Formatura</h2>
-      <div class="items" id="formatura">
-        <div class="combo-card"> 
-          <img src="/public/img/Festa infanto.jpg" width="200px">
-          <h3>Combo Fromatura </h3>
-          <p>Inclui: Buffet simples e música ambiente.</p>
-          <span class="price">R$ 1.500</span>
-          <div class="button-container">
-            <button class="btn">Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="combo" @click="toggleItems('quinze-anos')">
-      <h2>Festa de 15 Anos</h2>
-      <div class="items" id="quinze-anos">
-        <div class="combo-card">
-          <h3>Combo 15 Anos</h3>
-          <p>Inclui: Buffet completo, decoração glamourosa e DJ.</p>
-          <span class="price">R$ 4.000</span>
-          <div class="button-container">
-            <button class="btn">Comprar</button>
+    <div class="combo-container">
+      <div class="combo" v-for="combo in combos" :key="combo.id">
+        <div class="combo-content">
+          <img :src="combo.image" :alt="combo.title" class="combo-image">
+          <div class="overlay">
+            <h2>{{ combo.title }}</h2>
+            <p>{{ combo.description }}</p>
+            <span class="price">Preço: {{ combo.price }}</span>
+            <button class="buy-button" @click="redirectTo(combo.link)">Comprar</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Módulo: Sobre Nós -->
-  <div class="distancia">
-    <SobreNos />
+  <div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <Rodape />
   </div>
 </template>
 
 <script>
-import SobreNos from '~/components/SobreNos.vue';
-
 export default {
-  components: {
-    SobreNos,
+  data() {
+    return {
+      combos: [
+        {
+          id: 1,
+          title: 'Festa Infantil',
+          description: 'Pacote com decoração, bolo e lembrancinhas.',
+          image: 'https://rosaazul.cdn.magazord.com.br/img/2022/06/blog/12021/festa-infantil-tema-safari.jpg',
+          price: 'R$ 200,00',
+          link: '/festainfantil'
+        },
+        {
+          id: 2,
+          title: 'Formatura',
+          description: 'Pacote com jantar, decoração e fotos.',
+          image: 'https://cdn.prod.website-files.com/5fbd45a4128163fe7d9d9b0d/60c791dd48eb58937e0bc659_5.1.jpeg',
+          price: 'R$ 1.500,00',
+          link: '/formatura'
+        },
+        {
+          id: 3,
+          title: 'Festa de 15 Anos',
+          description: 'Pacote especial com baile e decoração temática.',
+          image: 'https://www.tuacasa.com.br/wp-content/uploads/2019/07/temas-para-festa-de-15-anos-0.jpg',
+          price: 'R$ 5.000,00',
+          link: '/festaquinze'
+        },
+        {
+          id: 4,
+          title: 'Casamento',
+          description: 'Pacote completo com buffet, decoração e música.',
+          image: 'https://cdn.alboompro.com/5f7e09ac8ef8cb000118b57e_623b314964c1930001437e36/original_size/20-ideias-de-decoracao-para-um-casamento-na-praia-c1f57853d363d37925d6.webp?v=1',
+          price: 'R$ 10.000,00',
+          link: '/casamento'
+        }
+      ]
+    };
   },
   methods: {
-    toggleItems(comboId) {
-      const items = document.getElementById(comboId);
-      const allItems = document.querySelectorAll('.items');
-
-      allItems.forEach(item => {
-        if (item !== items) {
-          item.style.display = 'none';
-        }
-      });
-
-      items.style.display = items.style.display === 'block' ? 'none' : 'block';
+    redirectTo(link) {
+      window.location.href = link; // Redireciona para o link especificado
     }
   }
 }
 </script>
 
-<style lang="css" scoped>
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: #f0f0f0; /* Fundo cinza claro */
-  display: flex;
-  flex-direction: column; /* Organiza em coluna */
-  gap: 20px; /* Espaçamento uniforme entre os combos */
-}
-
+<style scoped>
 .header {
-  position: relative;
-  z-index: 2; /* Fica acima do fundo */
-  text-align: center;
   margin-bottom: 20px; /* Espaço entre o título e os combos */
+  text-align: center; /* Centraliza o título */
 }
 
-.header h1 {
-  color: white;
-  background: #6E32A6; /* Fundo roxo */
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+.combo-title {
+  background-color: #6E32A6; /* Fundo roxo */
+  color: white; /* Cor do texto branco */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  display: inline-block; /* Para o fundo se ajustar ao tamanho do texto */
 }
 
-.header::before {
-  content: '';
+.combo-container {
+  display: flex;
+  justify-content: center; /* Centraliza os combos horizontalmente */
+  flex-wrap: wrap; /* Permite que os combos quebrem para a linha seguinte se não houver espaço */
+  gap: 20px; /* Espaçamento entre os combos */
+  padding: 0 20px; /* Espaçamento nas bordas */
+}
+
+.combo {
+  flex: 0 0 15%; /* Define que cada combo ocupará 15% da largura */
+  position: relative;
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa */
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.combo-content {
+  position: relative;
+  transition: transform 0.3s; /* Transição suave para o zoom */
+  height: 350px; /* Aumentando a altura do contêiner do combo */
+}
+
+.combo:hover .combo-content {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.combo img {
+  width: 100%; /* Garante que a imagem preencha toda a largura do combo */
+  height: 100%; /* Define a altura da imagem igual à altura do contêiner */
+  object-fit: cover; /* Cobre a área da imagem mantendo a proporção */
+  border-radius: 10px; /* Bordas arredondadas nas imagens */
+}
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('caminho-para-sua-imagem-de-arranhado.png') no-repeat center center;
-  background-size: cover;
-  opacity: 0.2; /* Transparência do arranhado */
-  z-index: 1; /* Fica atrás do texto */
-}
-
-.combo {
-  flex: 1;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  background: #e6f0ff; /* Azul neutro e elegante */
-  position: relative;
-}
-
-.combo:hover {
-  background: rgba(200, 200, 200, 0.3);
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra no hover */
-}
-
-.items {
-  display: none;
-  margin-top: 10px;
-}
-
-.items ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.combo-container {
-  margin-top: 10px;
-}
-
-.combo-card {
-  background: #6E32A6; /* Fundo dos cards */
+  background: rgba(0, 0, 0, 0.7); /* Fundo escuro com transparência */
   color: white;
-  border-radius: 8px;
-  padding: 15px;
-  margin-top: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante para os cards */
-  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.3s; /* Transição suave para a opacidade */
 }
 
-.combo-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+.combo:hover .overlay {
+  opacity: 1; /* Torna visível ao passar o mouse */
+}
+
+h2, p, .price {
+  margin: 5px 0; /* Margem entre os elementos de texto */
+  text-align: center; /* Centraliza o texto */
 }
 
 .price {
-  font-weight: bold;
-  font-size: 1.2em;
+  font-weight: bold; /* Destaca o preço */
 }
 
-.button-container {
+.buy-button {
   margin-top: 10px; /* Espaçamento acima do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  background-color: #28a745; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas do botão */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
 }
 
-.btn {
-  background: white; /* Fundo branco */
-  color: #6E32A6; /* Texto roxo */
-  border: 1px solid #6E32A6; /* Borda roxa */
-  border-radius: 5px;
-  padding: 8px 12px; /* Diminuir tamanho do botão */
-  cursor: pointer;
-  transition: transform 0.3s; /* Apenas a transformação */
-  font-weight: bold;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra no hover do botão */
-}
-
-.distanciateoe {
-  margin-top: 120px;
+.buy-button:hover {
+  background-color: #218838; /* Cor do botão ao passar o mouse */
 }
 </style>
