@@ -36,6 +36,10 @@
         </form>
       </div>
     </div>
+   <br>   <br> <br>
+  
+
+    <Rodape />
   </template>
   
   <script>
