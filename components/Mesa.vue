@@ -1,6 +1,7 @@
 <script setup>
 
-const params = defineProps (["produtos", "disponivel", "adicionaAoCarrinho"]); 
+const params = defineProps (["produtos", "disponivel", "adicionaAoCarrinho", "comprar"]); 
+
 
 </script>
 
@@ -18,8 +19,8 @@ const params = defineProps (["produtos", "disponivel", "adicionaAoCarrinho"]);
 
         
         
-        <div v-on:click="params.adicionaAoCarrinho(params.produtos)" class="texto" v-if="comprar==false">Comprar </div>
-        <button class="cancelar">Remover</button>
+        <div v-on:click="params.adicionaAoCarrinho(params.produtos)" class="texto" v-if="params.comprar == false || params.comprar == null">Comprar</div>
+        <button class="cancelar" v-if="params.comprar == true">Remover</button>
        
     </div>
 

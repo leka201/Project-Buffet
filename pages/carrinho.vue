@@ -1,6 +1,6 @@
 <script setup>
 
-const params = defineProps(["produtos"]);
+const params = defineProps(["carrinho"]);
 
 </script>
 
@@ -14,7 +14,7 @@ const params = defineProps(["produtos"]);
 
 
 <div class=" item">
-    <Mesa v-for="produto in produtos" v-bind:produtos="produto" />
+    <Mesa v-for="produtoNoCarrinho in params.carrinho" v-bind:produtos="produtoNoCarrinho" v-bind:comprar="true" />
 </div> 
 
 

@@ -100,7 +100,7 @@
 
                             <div v-for="produto in produtos">
                                 
-                                <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />
+                                <Mesa class="flex" v-bind:adicionaAoCarrinho="adicionaAoCarrinho"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />
                             
                             </div>                            
                         </div>

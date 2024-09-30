@@ -90,8 +90,18 @@ const produtos = reactive([
 ])
 
 function adicionaAoCarrinho( produto ){
-    produtos.push(produto)
+    carrinho.push(produto)
+    alert("Produto adicionado com sucesso")
 }
+
+const carrinho = reactive ([
+{
+        id:2,
+        nome: "salgados",
+        preco:"R$50,00",
+        disponivel:false,
+    },
+])
 
 </script>
 
@@ -102,7 +112,7 @@ function adicionaAoCarrinho( produto ){
 
     <Head>        <Script src="./assets/js/font-awesome-v6.6.js"></Script>    </Head>
   <Menu/>
-  <NuxtPage v-bind:produtos="produtos" v-bind:adicionaAoCarrinho ="adicionaAoCarrinho" v-bind:users="users"/>
+  <NuxtPage v-bind:produtos="produtos" v-bind:adicionaAoCarrinho ="adicionaAoCarrinho" v-bind:carrinho="carrinho" v-bind:users="users"/>
 
   
 
