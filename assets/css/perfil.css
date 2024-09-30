@@ -39,15 +39,16 @@ body{
 }
 
 .lado_a_lado{
+    text-align: center;
     align-items: center;
     margin-top: 10px;
     width: 300px;
-    text-align: center;
     background-color: #ae82da;
     padding: 10px;
     color:#e6e7eb;
     gap:10px;
     border-radius: 20px;
+    
     
 }
 
@@ -145,5 +146,21 @@ body{
     margin-bottom: 30px;
   }
 
+  .historico{
+    margin-top: 30px;
+    text-align: center ;
+  }
+
+  .alterar{
+    border-radius:20px ;
+    background-color:#d6c0ec;
+    color:#333;
+    
+  }
+
+  .altear:hover{
+    background-color: #6a0dad;
+    color: #fff;
+  }
   
   

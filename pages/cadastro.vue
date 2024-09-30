@@ -10,27 +10,27 @@
             <form action="login">
                 <div class="input-conta">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" required>
+                    <input type="text" id="nome" minlength="2" required>
                 </div>
                 
                 <div class="input-conta">
                     <label for="cpf">CPF</label>
-                    <input type="text" id="cpf" required>
+                    <input type="text" id="cpf" minlength="8" required>
                 </div>
                 
                 <div class="input-conta">
-                    <label for="email">E-mail</label>
+                    <label for="email">Email</label>
                     <input type="email" id="email" required>
                 </div>
                 
                 <div class="input-conta">
                     <label for="cep">CEP</label>
-                    <input type="text" id="cep" required>
+                    <input type="text" id="cep"minlength="9" required>
                 </div>
                 
                 <div class="input-conta">
                     <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" required>
+                    <input type="text" id="endereco" minlength="2" required>
                 </div>
                 
                 <div class="input-conta">
