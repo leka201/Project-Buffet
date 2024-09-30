@@ -10,9 +10,11 @@ body{
     padding: 20px;
     margin: 0;
     border-radius: 20px;
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 40px;
     text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
 }
 
 .cartão{
@@ -42,6 +44,7 @@ div{
     color: #F5F5F5;
     cursor: pointer;
     text-align: center;
+    border-radius: 20px;
 }
 
 .efetuarPagamento:hover{
@@ -53,6 +56,7 @@ div{
     background: green;
     color: #e6e7eb;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .voltar:hover{
@@ -67,4 +71,13 @@ button{
 .cartaoSelecionar{
     margin: auto;
     text-align: center;
+}
+
+.junto{
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 8px;
 }
