@@ -115,3 +115,16 @@ margin-top: -75px;
 .coluna{
     flex-direction:column
 }
+
+.cancelar{
+    background: red;
+    cursor: pointer;
+    color: #F5F5F5;
+    font-size: 15px;
+    border-radius: 30px;
+}
+
+.cancelar:hover{
+    background: lightcoral;
+    color: black;
+}

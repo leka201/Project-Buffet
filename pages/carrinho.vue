@@ -14,16 +14,9 @@ const params = defineProps(["produtos"]);
 
 
 <div class=" item">
-    
     <Mesa v-for="produto in produtos" v-bind:produtos="produto" />
-    
-   <!--<p>Quantidade por cento: <span id="quant.">0</span> </p>
+</div> 
 
-    <button onclick='aumentar() '>Adicionar</button>
-    <button onclick='diminuir()'>Diminuir</button>
-    <button class="cancelar">Cancelar</button>--> 
-
-</div>
 
 <br/>
 

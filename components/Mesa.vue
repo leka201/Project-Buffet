@@ -19,7 +19,7 @@ const params = defineProps (["produtos", "disponivel", "adicionaAoCarrinho"]);
         
         
         <div v-on:click="params.adicionaAoCarrinho(params.produtos)" class="texto" v-if="comprar==false">Comprar </div>
-
+        <button class="cancelar">Remover</button>
        
     </div>
 
