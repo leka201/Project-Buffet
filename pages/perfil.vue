@@ -1,3 +1,20 @@
+<script setup>
+
+    let user = ref({})
+
+    function carregadados(){
+        if(localStorage.getItem("user")){
+            let userobjeto = localStorage.getItem("user")
+            userobjeto = JSON.parse(userobjeto)
+            user.value = userobjeto
+        }
+    }
+
+    onMounted(()=>{
+        carregadados()
+        console.log(user)
+    })
+</script>
 
 <template>
 <div class="divisao">
@@ -12,12 +29,12 @@
 
 
         <div class="center meio">
-            <h2><strong>Ana Clara Souza Camargo</strong> </h2>
+            <h2><strong>{{ user.name }}</strong> </h2>
             <hr>
             <h2>Informações Pessoais:</h2>
-            <p><strong>E-mail: </strong>anaclasouza005@gmail.com</p>
-            <p><strong>Data de nascimento: </strong> 08/11/2005</p>
-            <p><strong>Endereço: </strong>Av. João Stella, 480, Romeu Tortorelli</p>
+            <p><strong>E-mail: </strong>{{ user.email }}</p>
+            <p><strong>Data de nascimento: </strong> {{ user.born }}</p>
+            <p><strong>Endereço: </strong>{{ user.endereco }}</p>
             <p><strong>Cartão: </strong>nupay</p>
             <a  href="./alteracao.vue"><button class="alterar" v-on:click="">Alterar</button></a>
         </div>

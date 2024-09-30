@@ -7,7 +7,7 @@
       <div class="vehicle-details">
         <img src="https://www.jeep.com.br/content/dam/jaguar/jeep/jeep-brasil/2021/compass/2021/jeep-compass-2021-1.jpg" alt="Jeep Compass" class="vehicle-image">
         <div class="vehicle-info">
-          <h2>Jeep Compass</h2>
+          <h2>Jeep Combosta</h2>
           <p>O SUV que combina tecnologia e conforto.</p>
           <span class="price">Preço: R$ 150.000,00</span>
         </div>
