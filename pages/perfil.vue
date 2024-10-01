@@ -12,11 +12,11 @@ function carregadados() {
     if (userData) {
         try {
             user.value = JSON.parse(userData);
-        } catch (error) {
-            console.error("Erro ao parsear dados do usuário:", error);
-            router.push('/login'); // Redireciona se houver erro
-        }
-    } else {
+            } catch (error) {
+                console.error("Erro ao parsear dados do usuário:", error);
+                router.push('/login'); // Redireciona se houver erro
+                }
+                } else {
         router.push('/login'); // Redireciona se não houver usuário
     }
 }
@@ -54,7 +54,7 @@ onMounted(() => {
             <router-link to="/alteracao">
                 <button class="alterar">Alterar</button>
             </router-link>
-            <button class="sair" @click="sair">Sair</button> <!-- Botão Sair -->
+            <button class="alterar" @click="sair">Sair</button> <!-- Botão Sair -->
         </div>
     </div>
 

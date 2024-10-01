@@ -1,26 +1,27 @@
 <template>
-
-    <div class="container">
-        <h1>Alterar dados</h1>
-        <form>
-            <input type="text" readonly placeholder="Nome" minlength="2">
-            <input type="text"readonly placeholder="CPF" minlength="8">
-            <input type="email" readonly placeholder="E-mail" minlength="2">
-            <input type="text" readonly placeholder="Celular" minlength="9">
-            <input type="text" readonly placeholder="Endereço" minlength="2">
-           
-
-            <!-- Campos de senha -->
-            <input type="password" placeholder="Nova Senha" minlength="8">
-            <input type="password" placeholder="Confirmar Senha" minlength="8">
-            
-            <button type="submit" href="perfil">Alterar Dados</button>
-
-        </form>
+    <div class="cadastro-div">
+        <div class="cadastro-div2">
+            <h1>Alterar Dados</h1>
+            <form @submit.prevent="mostrarMensagem" id="alterar-form">
+                <input type="email" id="email" placeholder="Email" required />
+                <input type="tel" id="telefone" placeholder="Telefone" required />
+                <input type="text" id="endereco" placeholder="Endereço" required />
+                <input type="password" id="senha" placeholder="Nova Senha" required />
+                <button type="submit">Alterar Dados</button>
+            </form>
+        </div>
     </div>
-
 </template>
+
+<script setup>
+function mostrarMensagem() {
+    console.log('Dados alterados');  
+}
+</script>
 
 <style>
 @import url("/assets/css/alteracao.css");
 </style>
+
+
+

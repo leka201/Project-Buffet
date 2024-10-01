@@ -39,7 +39,7 @@ body{
 }
 
 .lado_a_lado{
-    text-align: center;
+    
     align-items: center;
     margin-top: 10px;
     width: 300px;
@@ -48,8 +48,8 @@ body{
     color:#e6e7eb;
     gap:10px;
     border-radius: 20px;
-    
-    
+    display: flex;
+   justify-content: center;
 }
 
 .informacao{
@@ -148,7 +148,7 @@ body{
 
   .historico{
     margin-top: 30px;
-    text-align: center ;
+   
   }
 
   .alterar{
