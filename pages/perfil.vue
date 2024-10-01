@@ -1,42 +1,60 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import '~/assets/css/perfil.css'; // Importa o CSS externo
 
-    let user = ref({})
+let user = ref({});
+let menuText = ref('Perfil'); // Variável reativa para o texto do menu
+const router = useRouter();
 
-    function carregadados(){
-        if(localStorage.getItem("user")){
-            let userobjeto = localStorage.getItem("user")
-            userobjeto = JSON.parse(userobjeto)
-            user.value = userobjeto
+function carregadados() {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+        try {
+            user.value = JSON.parse(userData);
+        } catch (error) {
+            console.error("Erro ao parsear dados do usuário:", error);
+            router.push('/login'); // Redireciona se houver erro
         }
+    } else {
+        router.push('/login'); // Redireciona se não houver usuário
     }
+}
 
-    onMounted(()=>{
-        carregadados()
-        console.log(user)
-    })
+function sair() {
+    localStorage.removeItem("user"); // Remove o usuário do localStorage
+    menuText.value = 'Login'; // Muda o texto do menu
+    router.push('/login'); // Redireciona para a tela de login
+}
+
+onMounted(() => {
+    carregadados();
+});
 </script>
 
 <template>
 <div class="divisao">
-<h1>Meu Perfil</h1>
+    <h1>Meu Perfil</h1>
 </div>
 
-<div class="informacao ">
-    <div class="inform ">
-        <div class=" img perfil">
+<div class="informacao" v-if="user.name">
+    <div class="inform">
+        <div class="img perfil">
             <i class="fa-solid fa-user"></i>
         </div>
 
-
         <div class="center meio">
-            <h2><strong>{{ user.name }}</strong> </h2>
+            <h2><strong>{{ user.name }}</strong></h2>
             <hr>
             <h2>Informações Pessoais:</h2>
             <p><strong>E-mail: </strong>{{ user.email }}</p>
-            <p><strong>Data de nascimento: </strong> {{ user.born }}</p>
+            <p><strong>Data de nascimento: </strong>{{ user.born }}</p>
             <p><strong>Endereço: </strong>{{ user.endereco }}</p>
             <p><strong>Cartão: </strong>nupay</p>
-            <a  href="./alteracao.vue"><button class="alterar" v-on:click="">Alterar</button></a>
+            <router-link to="/alteracao">
+                <button class="alterar">Alterar</button>
+            </router-link>
+            <button class="sair" @click="sair">Sair</button> <!-- Botão Sair -->
         </div>
     </div>
 
@@ -45,26 +63,14 @@
         <h3>Últimas compras:</h3>
         <div class="lado_a_lado">
             <img class="imagem" src="https://i0.wp.com/anamariabraga.globo.com/wp-content/uploads/2017/12/coxinha-cremosa.jpg?fit=1200%2C675&ssl=1" width="90" height="90">
-            <p>Salgado frito, pequeno, 600 unidades, R$300,0</p>
+            <p>Salgado frito, pequeno, 600 unidades, R$300,00</p>
         </div>
-            
-
-        <div class="lado_a_lado">
-            <img class="imagem" src="https://http2.mlstatic.com/D_NQ_NP_861529-MLB49580616668_042022-O.webp" width="90" height="90">
-            <p>Decoração de festa infantil, do sonic R$200,0</p>    
-        </div>
-
-        <div class="lado_a_lado">
-            <img class="imagem" src="https://moveislinhares.vteximg.com.br/arquivos/ids/222952-430-430/Conjunto
-            -TopPlast-com-Mesas-de-Plastico-Top-e-6-Cadeiras-Valentina-na-cor-Branco---2.jpg" width="90" height="90">
-            <p>Conjunto de cadeira e mesa de plástico, 10 unidades,R$100,0</p>   
-        </div>
+        <!-- Outras compras aqui -->
     </div>
 </div>
 
-<!-- <script src="./css awesome/font-awesome-v6.6.js"></script> -->
+<!-- Menu -->
+<nav class="menu">
+    <router-link to="/perfil">{{ menuText }}</router-link>
+</nav>
 </template>
-
-<style scoped>
-@import url("~/assets/css/perfil.css");
-</style>
