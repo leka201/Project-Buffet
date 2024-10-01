@@ -1,6 +1,7 @@
-body {
+ html, body {
     background-color: #e6e7eb;
     margin: 0;
+    height: 100%;
 }
 
 .container {
@@ -16,7 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 20px; 
-    height: 756px;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .flex{
