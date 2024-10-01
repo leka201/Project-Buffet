@@ -24,7 +24,7 @@ const params = defineProps(["carrinho"]);
 
 <div class="btncentro">
     <button class="cancelar">Cancelar tudo</button>
-    <a href="./pagamento.vue"><button class="salvarContinuar">continuar</button></a>
+    <a href="./pagamento"><button class="salvarContinuar">continuar</button></a>
     </div>
     </template>
 
