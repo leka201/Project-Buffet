@@ -81,9 +81,6 @@ button{
     width: 400px;
 }
 
-.detalhes{
-    display: none;
-}
 
 label{
     display: block;
@@ -96,4 +93,8 @@ input[type="text"], select {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.pix-qr{
+    width: 100%;
 }
