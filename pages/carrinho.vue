@@ -1,6 +1,7 @@
 <script setup>
 
-const params = defineProps(["carrinho"]);
+const params = defineProps(["carrinho", "EliminarItem"]);
+
 
 </script>
 
@@ -14,7 +15,7 @@ const params = defineProps(["carrinho"]);
 
 
 <div class=" item">
-    <Mesa v-for="produtoNoCarrinho in params.carrinho" v-bind:produtos="produtoNoCarrinho" v-bind:comprar="true" />
+    <Mesa v-bind:EliminarItem="EliminarItem" v-for="produtoNoCarrinho in params.carrinho" v-bind:produtos="produtoNoCarrinho" v-bind:comprar="true" />
 </div> 
 
 

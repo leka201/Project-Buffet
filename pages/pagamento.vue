@@ -1,5 +1,9 @@
 <script setup>
 
+let metodo = ref()
+ function alterametodo(valor){
+  metodo.value = valor
+ }
 
 </script>
 
@@ -15,18 +19,18 @@
           <p class="cartão" ><strong >Escolha</strong></p>
 
           <label>
-            <input type="radio" v-model="paymentMethod" value="credit-card" checked>
+            <input type="radio" v-on:change="alterametodo('credit-card')" value="credit-card" name="pagamento">
             Cartão
           </label>
 
-          <p class="pix"><strong>Pix:</strong></p>
+          
           <label>
-            <input type="radio" v-model="paymentMethod" value="pix">
+            <input type="radio" v-on:change="alterametodo('pix')" v-model="paymentMethod" value="pix" name="pagamento">
             PIX
           </label>
         </div>
 
-        <div v-if="paymentMethod === 'credit-card'">
+        <div v-if="metodo == 'credit-card'">
           <label  class="espaço">CPF/CNPJ: </label>
           <input  type="number" v-model="cpfCnpj" minlength="3" required>
 
@@ -51,8 +55,8 @@
           </select>
         </div>
 
-        <div id="pix-info" class="detalhes" v-if="paymentMethod === 'pix'">
-            <h2>PIX</h2>
+        <div class="detalhes" v-if="metodo == 'pix'">
+            <p class="pix"><strong>Pix:</strong></p>
             <p>Chave PIX: <strong>SoulFest@gmail.com</strong></p>
             <p>Escaneie o QRcode abaixo:</p>
             <img src="https://png.pngtree.com/png-clipart/20220605/original/pngtree-black-qr-code-for-web-png-image_7964376.png" alt="Código QR PIX" class="pix-qr">
@@ -64,11 +68,11 @@
 
       </form>
         
-        <div class="cartaoSelecionar">
-          <p href="./carrinho_projeto"><button class="voltar"> Voltar </button></p>
-        </div>
+      <div class="cartaoSelecionar">
+        <p href="./carrinho_projeto"><button class="voltar"> Voltar </button></p>
+      </div>
 
-        <div v-if="paymentSuccess" class="overlay">{{ message }}</div>
+      <div v-if="paymentSuccess" >{{ message }}</div>
     </div>
   </div>
 </template>

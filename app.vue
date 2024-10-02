@@ -94,6 +94,15 @@ function adicionaAoCarrinho( produto ){
     alert("Produto adicionado com sucesso")
 }
 
+function EliminarItem(produto){
+    carrinho.forEach((c,index)=>{
+        console.log(c.id, produto.id)
+        if(c.id==produto.id){
+            carrinho.splice(index, 1)
+        }
+    })
+}
+
 const carrinho = reactive ([
 {
         id:2,
@@ -112,7 +121,7 @@ const carrinho = reactive ([
 
     <Head>        <Script src="./assets/js/font-awesome-v6.6.js"></Script>    </Head>
   <Menu/>
-  <NuxtPage v-bind:produtos="produtos" v-bind:adicionaAoCarrinho ="adicionaAoCarrinho" v-bind:carrinho="carrinho" v-bind:users="users"/>
+  <NuxtPage v-bind:produtos="produtos" v-bind:adicionaAoCarrinho ="adicionaAoCarrinho" v-bind:carrinho="carrinho" v-bind:users="users" v-bind:EliminarItem="EliminarItem"/>
 
   
 
