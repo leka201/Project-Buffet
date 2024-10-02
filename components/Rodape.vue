@@ -9,7 +9,7 @@
         <div class="footer-section">
           <h3>Links Úteis</h3>
           <ul>
-            <li><a href="/sobre">Sobre Nós</a></li>
+            <li><a href="/sobrenos">Sobre Nós</a></li>
             <li><a href="/servicos">Serviços</a></li>
             <li><a href="/contato">Contato</a></li>
             <li><a href="/politica-de-privacidade">Política de Privacidade</a></li>

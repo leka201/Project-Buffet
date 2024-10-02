@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import '~/assets/css/perfil.css'; // Importa o CSS externo
+
 
 let user = ref({});
 let menuText = ref('Perfil'); // Variável reativa para o texto do menu
@@ -74,3 +74,7 @@ onMounted(() => {
     <router-link to="/perfil">{{ menuText }}</router-link>
 </nav>
 </template>
+
+<style scoped>
+    @import '~/assets/css/perfil.css';
+</style>
