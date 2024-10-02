@@ -52,6 +52,15 @@ watch(() => localStorage.getItem("user"), (newValue) => {
         <NuxtLink v-bind:class="['margin', 'persobtn', linkSelecionado == 'perfil' ? 'ativo' : '']" to="/perfil" v-on:click="alteraLinkSelecionado('perfil')"> {{ usuarioLogado ? 'Perfil' : 'Login' }} </NuxtLink>
     </div>
 </div>
+
+
+
+
+
+
+
+
+    
 </template>
 
 <style scoped>
