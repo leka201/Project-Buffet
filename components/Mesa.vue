@@ -15,7 +15,7 @@ const params = defineProps (["produtos", "disponivel", "adicionaAoCarrinho", "co
     <h1 class="textoimg">{{params.produtos.nome}} </h1> 
 
 
-        <img class="redonda " src="/public/img/mesas.png" width="300px" alt="Mesas">
+        <img class="redonda " v-bind:src="params.produtos.imagem" width="300px" alt="Mesas">
 
         
         

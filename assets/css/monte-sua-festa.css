@@ -10,6 +10,7 @@
     background: #fff !important;
     padding: 20px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .lateral{
@@ -18,9 +19,16 @@
     flex-direction: column;
     margin-right: 20px; 
     justify-content:flex-start;
-    height: 100vh;
+    height: fit-content;
+    position: fixed;
     padding: 10px;
     box-sizing: border-box;
+}
+
+.produtos {
+
+    margin-left: 300px;
+
 }
 
 .flex{

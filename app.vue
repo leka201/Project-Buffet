@@ -57,36 +57,33 @@ const users = reactive([
 ]);
 
 const produtos = reactive([
-{
-        id:0,
-        nome: "Decoração de Futebol",
-        preco: "R$50,00",
-        disponivel: false, 
-    },
-    {
-        id:1,
-        nome: "Cadeiras e Mesas",
-        preço: "R$100,00",
-        disponivel: false,
-    },
-    {
-        id:2,
-        nome: "salgados",
-        preco:"R$50,00",
-        disponivel:false,
-    },
-    {
-        id:3,
-        nome: "refrigerantes",
-        preco: "R$50,00",
-        disponivel: false,
-    },
-    {
-        id:4,
-        nome:"bolos",
-        preço: "R$150,00",
-        disponivel: false,
-    },
+
+    { "id": 0, "nome": "Decoração de Futebol", "preco": "R$50,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/jcg4pBt.png"},
+    { "id": 1, "nome": "Balões de Futebol", "preco": "R$30,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/P1Irwdd.png"},
+    { "id": 2, "nome": "Painel de Futebol", "preco": "R$100,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/rJfGa7j.png"},
+    { "id": 3, "nome": "Cestas de Pipas Coloridas", "preco": "R$40,00", "tipo": "Decoração", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/lpqbjHZ.png"},
+    { "id": 4, "nome": "Guirlandas de Futebol", "preco": "R$25,00", "tipo": "Decoração", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/Vuljog4.png"},
+
+    { "id": 5, "nome": "Pipoca em Caixinhas", "preco": "R$20,00", "tipo": "Comida", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/u6gpKBW.png"},
+    { "id": 6, "nome": "Mini Hot Dogs", "preco": "R$40,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/aeE5CkE.png"},
+    { "id": 7, "nome": "Cupcakes Decorados", "preco": "R$60,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/Mi6dD8X.png"},
+    { "id": 8, "nome": "Biscoitos Decorados", "preco": "R$35,00", "tipo": "Comida", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/47ruFAK.png"},
+    { "id": 9, "nome": "Suco de Frutas", "preco": "R$25,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/29ci6sZ.png"},
+
+    { "id": 10, "nome": "Mesa de Princesas", "preco": "R$80,00", "tipo": "Mesa", "dimensão": "M", "alugado": true, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/YKEVhEw.png"},
+    { "id": 11, "nome": "Toalha de Mesa Infantil", "preco": "R$20,00", "tipo": "Mesa", "dimensão": "M", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/gKaWKtz.png"},
+    { "id": 12, "nome": "Pratos e Copos Coloridos", "preco": "R$15,00", "tipo": "Mesa", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/eRr2Sys.png"},
+    { "id": 13, "nome": "Talheres de Plástico", "preco": "R$10,00", "tipo": "Mesa", "dimensão": "P", "alugado": false, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/XD5A3Bk.png"},
+    { "id": 14, "nome": "Cadeira Infantil", "preco": "R$25,00", "tipo": "Mesa", "dimensão": "P", "alugado": true, "ocasião": "Festa Infantil" , "imagem": "https://i.imgur.com/FL1NumI.png"},
+
+    { "id": 15, "nome": "Arranjo de Flores para 15 Anos", "preco": "R$120,00", "tipo": "Decoração", "dimensão": "L", "alugado": false, "ocasião": "15 Anos" , "imagem": "https://i.imgur.com/3prHXqH.jpeg"},
+    { "id": 16, "nome": "Painel de LED Personalizado", "preco": "R$200,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "15 Anos" , "imagem": "https://i.imgur.com/a4eYBE4.jpeg"},
+    { "id": 17, "nome": "Cortina de Luzes", "preco": "R$80,00", "tipo": "Decoração", "dimensão": "M", "alugado": true, "ocasião": "15 Anos" , "imagem": "https://i.imgur.com/E5PtnwX.png"},
+    { "id": 18, "nome": "Balcão de Recepção", "preco": "R$150,00", "tipo": "Decoração", "dimensão": "L", "alugado": true, "ocasião": "15 Anos" , "imagem": "https://i.imgur.com/URQ4H9K.png"},
+    { "id": 19, "nome": "Centro de Mesa com Velas", "preco": "R$50,00", "tipo": "Decoração", "dimensão": "P", "alugado": false, "ocasião": "15 Anos" , "imagem": "https://i.imgur.com/BR9tkKY.png"},
+
+    { "id": 20, "nome": "Mini Sanduíches Gourmet", "preco": "R$70,00", "tipo": "Comida", "dimensão": "M", "alugado": false, "ocasião": "15 Anos" , "imagem": "https://i.imgur.com/Ll2EXcZ.jpeg"},
+   
 ])
 
 function adicionaAoCarrinho( produto ){
@@ -104,12 +101,7 @@ function EliminarItem(produto){
 }
 
 const carrinho = reactive ([
-{
-        id:2,
-        nome: "salgados",
-        preco:"R$50,00",
-        disponivel:false,
-    },
+
 ])
 
 </script>
