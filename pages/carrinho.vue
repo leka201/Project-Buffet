@@ -24,7 +24,7 @@ const params = defineProps(["carrinho", "EliminarItem"]);
 <hr class="carrinho">
 
 <div class="btncentro">
-    <button class="cancelar">Cancelar tudo</button>
+    <!-- <button class="cancelar">Cancelar tudo</button> -->
     <a href="./pagamento"><button class="salvarContinuar">continuar</button></a>
     </div>
     </template>

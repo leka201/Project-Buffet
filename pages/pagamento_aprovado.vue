@@ -9,7 +9,7 @@
 
     <br/>
 
-    <a href="./index"> <button>Voltar </button> </a>
+    <a href="./"> <button>Voltar </button> </a>
 </template>
 
 <style scoped>

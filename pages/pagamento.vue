@@ -9,14 +9,13 @@ let metodo = ref()
 
 
 <template>
-  <div id="app">
+  
      <div class="junto">
       <h1 class="Titulo">Escolha sua forma de pagamento!</h1>
 
-      <form action="./pagamento_aprovado" submit.prevent="confirmPayment" >
+      <form action="./pagamento_aprovado" class="centro">
 
         <div class="cartaoSelecionar">
-          <p class="cartão" ><strong >Escolha</strong></p>
 
           <label>
             <input type="radio" v-on:change="alterametodo('credit-card')" value="credit-card" name="pagamento">
@@ -32,22 +31,22 @@ let metodo = ref()
 
         <div v-if="metodo == 'credit-card'">
           <label  class="espaço">CPF/CNPJ: </label>
-          <input  type="number" v-model="cpfCnpj" minlength="3" required>
+          <input  type="text"  minlength="3" required>
 
           <label class="espaço"> Nome do Cartão:</label>
-          <input  type="text" v-model="cardName" minlength="2" required>
+          <input  type="text" minlength="2" required>
 
-          <label for="card-number" class="espaço">Número do Cartão: </label>
-          <input v-model="cardNumber" type="text" minlength="2" required>
+          <label  class="espaço">Número do Cartão: </label>
+          <input  type="text" minlength="2" required>
 
           <label class="espaço"> Validade:</label>
-          <input v-model="expiryDate" placeholder="MM/AA" type="date" required>
+          <input  placeholder="MM/AA" type="date" required>
+          
+          <label class="espaço" > (CVV):</label>
+          <input  type="text" minlength="2" required>
 
-          <label class="espaço" for="cvv"> (CVV):</label>
-          <input id="cvv" v-model="cvv" type="text" minlength="2" required>
-
-          <label for="installaments">Parcelas:</label>
-          <select id="installaments" v-model="installments">
+          <label >Parcelas:</label>
+          <select >
             <option value="1">À vista</option>
             <option value="3">3 vezes</option>
             <option value="6">6 vezes</option>
@@ -66,15 +65,17 @@ let metodo = ref()
           <p href="./pagamento_aprovado"> <button type="submit" class="efetuarPagamento"> Efetuar pagamento</button> </p>
         </div>
 
-      </form>
         
-      <div class="cartaoSelecionar">
-        <p href="./carrinho_projeto"><button class="voltar"> Voltar </button></p>
-      </div>
+        </form>
+
+        <!-- <div class="cartaoSelecionar">
+          <p href="./carrinho"><button class="voltar"> Voltar </button></p>
+        </div> -->
+        
 
       <div v-if="paymentSuccess" >{{ message }}</div>
     </div>
-  </div>
+  
 </template>
 
 <style scoped>
