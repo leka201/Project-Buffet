@@ -1,6 +1,6 @@
 <script setup>
 
-import('~/assets/css/index.css')
+import('./assets/css/Index.css')
 
 
 const users = reactive([
