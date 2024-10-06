@@ -19,25 +19,22 @@
     }
 
     const filtros_decoracao = reactive([
-    {nome:"Decorção de Futebol", filtro:"Mesa"},
-    {nome:"Decoração de Aniversário", filtro:"Decoração"},
-    {nome:"Decoração de Dinossauro", filtro:"Decoração"},
-    {nome:"Decoração de Casamento com Flores", filtro:"Decoração"}
+    {nome:"Decorção de Futebol", filtro:"decoração_fut"},
+    {nome:"Decoração de Casamento com Flores", filtro:"decoração_casam"}
     ])
 
     const filtros_itens_festa = reactive([
-    {nome:"Mesas", filtro:"Mesa"},
-    {nome:"Toalhas", filtro:"Decoração"},
-    {nome:"Pratos", filtro:"Decoração"},
-    {nome:"Talheres", filtro:"Decoração"},
-    {nome:"Cadeiras", filtro:"Decoração"}
+    {nome:"Mesas", filtro:"item_mesas"},
+    {nome:"Toalhas", filtro:"item_toalhas"},
+    {nome:"Pratos", filtro:"item_pratos"},
+    {nome:"Talheres", filtro:"item_talheres"},
+    {nome:"Cadeiras", filtro:"item_cadeiras"}
     ])
     
     const filtros_comida = reactive([
-    {nome:"Salgados", filtro:"Decoração"},
-    {nome:"Doces", filtro:"Comida"},
-    {nome:"Bebidas", filtro:"Comida"},
-    {nome:"Prato Principal", filtro:"Comida"}
+    {nome:"Salgados", filtro:"comida_salgados"},
+    {nome:"Doces", filtro:"comida_doces"},
+    {nome:"Bebidas", filtro:"comida_bebidas"},
     ])
     
     function disponivel(id){
@@ -69,9 +66,9 @@
 </script>
 
 <template>
-
+    
     <div class="container">
-
+            //
             <div class="lateral">
                 <ul>Monte seu evento:
 
@@ -83,7 +80,6 @@
                             
                 </ul>
             </div>
-
 
             <div class="produtos">
 
