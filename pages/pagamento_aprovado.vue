@@ -1,15 +1,15 @@
 
 <template>
     <!--Pós pagamento-->
-    <h1>Pagamento Efetuado com sucesso!!🎉 </h1>
+        <div class="tudojunto">
+            <h1>Pagamento Efetuado com sucesso!!🎉 </h1>
 
-    <hr>
+            <p> <strong> Meus parabéns por ter comprado em nossa loja, esperamos que faça bom proveito da sua compra.</strong></p>
 
-    <p> <strong> Meus parabéns por ter comprado em nossa loja, esperamos que faça bom proveito da sua compra.</strong></p>
+            <br/>
 
-    <br/>
-
-    <a href="./"> <button>Voltar </button> </a>
+            <a href="./"> <button>Voltar </button> </a>
+        </div>
 </template>
 
 <style scoped>
