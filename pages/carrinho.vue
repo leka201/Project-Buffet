@@ -1,7 +1,53 @@
 <script setup>
 
-const params = defineProps(["carrinho", "EliminarItem"]);
+import axios from 'axios';
 
+const params = defineProps(["carrinho", "EliminarItem"]);
+console.log(params)
+const carrinho = reactive([])
+
+async function addcarrinho(){
+    const resposta_carrinho = await axios.create("http://localhost:3000/cart/create")
+
+    carrinho.value = resposta_carrinho.data.db
+    console.log(carrinho.value)
+}
+
+async function lercarrinho(){
+    const resposta_carrinho = await axios.read("http://localhost:3000/cart/read")
+
+    carrinho.value = resposta_carrinho.data.db
+    console.log(carrinho.value)
+}
+
+async function mostracarrinho(){
+    const resposta_carrinho = await axios.show("http://localhost:3000/cart/show")
+
+    carrinho.value = resposta_carrinho.data.db
+    console.log(carrinho.value)
+}
+
+async function upcarrinho(){
+    const resposta_carrinho = await axios.update("http://localhost:3000/cart/update")
+
+    carrinho.value = resposta_carrinho.data.db
+    console.log(carrinho.value)
+}
+
+async function deletecarrinho(){
+    const resposta_carrinho = await axios.delete("http://localhost:3000/cart/delete")
+
+    carrinho.value = resposta_carrinho.data.db
+    console.log(carrinho.value)
+}
+
+onMounted(() => {
+    addcarrinho()
+    mostracarrinho()
+    lercarrinho()
+    upcarrinho()
+    deletecarrinho()
+})
 
 </script>
 
