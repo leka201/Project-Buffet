@@ -9,7 +9,7 @@
     const produtos = reactive([])
     async function BuscarProdutos(){
 
-        const resposta = await axios.get("http://10.60.44.23:3000/item/read")
+        const resposta = await axios.get("http://localhost:3000/item/read")
         
         produtos.value = resposta.data.db
         console.log(produtos.value)

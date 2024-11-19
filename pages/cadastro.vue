@@ -1,5 +1,7 @@
 <script setup>
 
+import axios from 'axios';
+
     const params = defineProps(["users"])
 
     const user = reactive({
@@ -15,6 +17,9 @@
     }) 
 
     function enviaforms(){
+
+    await 
+
         params.users.push(user)
         alert('usuario cadastrado com  sucesso')
         console.log(params.users)
