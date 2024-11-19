@@ -1,27 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <template>
      <p><strong>Decorações:</strong></p>
         <div class="conteudo">
