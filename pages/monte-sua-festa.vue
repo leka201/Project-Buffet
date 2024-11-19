@@ -2,9 +2,21 @@
 
     import ('~/assets/css/monte-sua-festa.css')
     import ('~/assets/css/animate.min.css')
+    import axios from 'axios';
 
-    const params = defineProps(["produtos", "adicionaAoCarrinho"])
+    const params = defineProps(["adicionaAoCarrinho"])
     console.log(params)
+    const produtos = reactive([])
+    async function BuscarProdutos(){
+
+        const resposta = await axios.get("http://localhost:3000/item/read")
+        
+        produtos.value = resposta.data.db
+        console.log(produtos.value)
+    }
+    onMounted ( () => {
+        BuscarProdutos()
+    })
 
     // Sugestão de estudo: funções filter, forEach e map
 
