@@ -15,7 +15,7 @@
         console.log(produtos.value)
     }
     onMounted ( () => {
-        BuscarProdutos()
+        BuscarPrBuscarodutos()
     })
 
     // Sugestão de estudo: funções filter, forEach e map
