@@ -9,10 +9,10 @@
     const produtos = reactive([])
     async function BuscarProdutos(){
 
-        const resposta = await axios.get("http://localhost:3000/item/read")
+        const resposta = await axios.get("http://localhost:3001/item/read")
         
         produtos.value = resposta.data.db
-        console.log(produtos.value)
+        console.log(produtos.value )
     }
     onMounted ( () => {
         BuscarProdutos()
@@ -106,10 +106,8 @@
                         
                         <div class="flex">
 
-                            <div v-for="produto in produtos">
-                                
-                                <Mesa class="flex" v-bind:adicionaAoCarrinho="adicionaAoCarrinho"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />
-                            
+                            <div v-for="produto in produtos.value">                                     
+                                <Mesa class="flex" v-bind:adicionaAoCarrinho="adicionaAoCarrinho"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />                      
                             </div>                            
                         </div>
                 </div>
@@ -126,7 +124,7 @@
                         <div class="flex">
 
                             <div v-for="produto in produtos">
-                                <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />
+                                <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" />
                                 
                             </div>
                     
