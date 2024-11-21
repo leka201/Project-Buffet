@@ -27,8 +27,28 @@ function sair() {
     router.push('/login'); // Redireciona para a tela de login
 }
 
+async function mostrapagamento(){
+    const resposta_pagamento = await axios.show("http://localhost:3000/cart/show")
+
+    pagamento.value = resposta_pagamento.data.db
+    console.log(pagamento.value)
+}
+
+// listar todos os carrinhos na tela de perfil
+async function lerpagamento(){
+    const resposta_pagamento = await axios.read("http://localhost:3000/cart/read")
+
+    pagamento.value = resposta_pagamento.data.db
+    console.log(pagamento.value)
+}
+
+
+
+
 onMounted(() => {
     carregadados();
+    mostrapagamento();
+    lerpagamento()
 });
 </script>
 
@@ -60,11 +80,14 @@ onMounted(() => {
 
     <hr>
     <div class="historico">
-        <h3>Últimas compras:</h3>
-        <div class="lado_a_lado">
-            <img class="imagem" src="https://i0.wp.com/anamariabraga.globo.com/wp-content/uploads/2017/12/coxinha-cremosa.jpg?fit=1200%2C675&ssl=1" width="90" height="90">
-            <p>Salgado frito, pequeno, 600 unidades, R$300,00</p>
-        </div>
+        
+        <h2 v-on="mostrapagamento">
+            Ultima compra sua 
+        </h2>
+
+        <h2 v-on="mostrapagamento">
+           Seu historico inteiro 
+        </h2>
         <!-- Outras compras aqui -->
     </div>
 </div>

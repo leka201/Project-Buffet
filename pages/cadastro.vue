@@ -1,11 +1,12 @@
 <script setup>
 
 import axios from 'axios';
+import Login from './login.vue';
 
     const params = defineProps(["users"])
 
     const user = reactive({
-        name:'',
+        login:'',
         cpf:'',
         email:'',
         cep:'',
@@ -16,14 +17,29 @@ import axios from 'axios';
 
     }) 
 
-    function enviaforms(){
+    async function enviaforms(){
 
-    await 
+        resposta = await axios.post("http://localhost:3000/user/create", {
+            login:user.login,
+            cpf:user.cpf,
+            email: user.email,
+            cep: user.cep,
+            endereco: user.endereco,
+            gender: user.gender,
+            born: user.born,
+            password: user.password
+        })
 
-        params.users.push(user)
+        
+        params.users.push(resposta.data.user)
         alert('usuario cadastrado com  sucesso')
         console.log(params.users)
     }
+
+    onMounted(() => {
+        enviaforms()
+
+    })
 
 </script>
 
@@ -37,7 +53,7 @@ import axios from 'axios';
             <form v-on:submit.prevent="enviaforms()">
                 <div class="input-conta">
                     <label for="nome">Nome Completo</label>
-                    <input type="text" id="nome" minlength="2" required v-model="user.name">
+                    <input type="text" id="nome" minlength="2" required v-model="user.login">
                 </div>
                 
                 <div class="input-conta">
