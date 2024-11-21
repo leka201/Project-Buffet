@@ -1,9 +1,48 @@
 <script setup>
+import axios from 'axios';
+import Pagamento_aprovado from './pagamento_aprovado.vue';
 
 let metodo = ref()
  function alterametodo(valor){
   metodo.value = valor
- }
+
+}
+
+const pagamento = reactive([])
+
+async function criar (){
+  const resposta_pagamento = await axios.post("http://localhost:3000/cart/create")
+  pagamento.value = resposta_pagamento.data.db
+    console.log(pagamento.value)
+
+    if(pagamento == Pagamento_aprovado){
+        alert("pagamento deu bom meu campeão")
+    }
+    else{
+        pagamento != Pagamento_aprovado
+        alert("paga a sua fatura meu campeão")
+    }
+
+    
+  } 
+
+  //lista um unico carrinho indv com pag 
+async function mostrapagamento(){
+    const resposta_pagamento = await axios.show("http://localhost:3000/cart/show")
+
+    pagamento.value = resposta_pagamento.data.db
+    console.log(pagamento.value)
+}
+
+// listar todos os carrinhos na tela de perfil
+async function lerpagamento(){
+    const resposta_pagamento = await axios.read("http://localhost:3000/cart/read")
+
+    pagamento.value = resposta_pagamento.data.db
+    console.log(pagamento.value)
+}
+
+
 
 </script>
 
@@ -13,7 +52,7 @@ let metodo = ref()
      <div class="junto">
       <h1 class="Titulo">Escolha sua forma de pagamento!</h1>
 
-      <form action="./pagamento_aprovado" class="centro">
+      <form v-on:change="criar()" action="./pagamento_aprovado" class="centro">
 
         <div class="cartaoSelecionar">
 
@@ -68,11 +107,7 @@ let metodo = ref()
         
         </form>
 
-        <!-- <div class="cartaoSelecionar">
-          <p href="./carrinho"><button class="voltar"> Voltar </button></p>
-        </div> -->
         
-
       <div v-if="paymentSuccess" >{{ message }}</div>
     </div>
   

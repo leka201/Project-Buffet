@@ -7,7 +7,7 @@ console.log(params)
 const carrinho = reactive([])
 
 async function addcarrinho(){
-    const resposta_carrinho = await axios.create("http://localhost:3000/cart/create")
+    const resposta_carrinho = await axios.post("http://localhost:3000/cart/create")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)
