@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
+import axios from 'axios'; 
 
 
 let user = ref({});
@@ -27,28 +28,14 @@ function sair() {
     router.push('/login'); // Redireciona para a tela de login
 }
 
-async function mostrapagamento(){
-    const resposta_pagamento = await axios.show("http://localhost:3000/cart/show")
 
-    pagamento.value = resposta_pagamento.data.db
-    console.log(pagamento.value)
-}
-
-// listar todos os carrinhos na tela de perfil
-async function lerpagamento(){
-    const resposta_pagamento = await axios.read("http://localhost:3000/cart/read")
-
-    pagamento.value = resposta_pagamento.data.db
-    console.log(pagamento.value)
-}
 
 
 
 
 onMounted(() => {
     carregadados();
-    mostrapagamento();
-    lerpagamento()
+
 });
 </script>
 
@@ -92,10 +79,7 @@ onMounted(() => {
     </div>
 </div>
 
-<!-- Menu -->
-<nav class="menu">
-    <router-link to="/perfil">{{ menuText }}</router-link>
-</nav>
+
 </template>
 
 <style scoped>

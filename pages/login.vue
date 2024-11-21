@@ -29,11 +29,10 @@ function autenticar() {
 </script>
 
 <template>
-<form>
     <div class="cadastro-div">
         <div class="cadastro-div2">
             <h1>Login</h1>
-            <form v-on:submit.prevent="autenticar()">
+            <form @submit.prevent="autenticar">
                 <div class="input-conta">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required v-model="email">
@@ -47,7 +46,6 @@ function autenticar() {
             <a href="cadastro">Não tem conta? Crie aqui</a>
         </div>
     </div>
-</form>
 </template>
 
 <style scoped>
