@@ -31,7 +31,7 @@
     }
 
     const filtros_decoracao = reactive([
-    {nome:"Decorção de Futebol", filtro:"decoração_fut"},
+    {nome:"Decoração de Futebol", filtro:"decoração_fut"},
     {nome:"Decoração de Casamento com Flores", filtro:"decoração_casam"}
     ])
 
@@ -48,10 +48,6 @@
     {nome:"Doces", filtro:"comida_doces"},
     {nome:"Bebidas", filtro:"comida_bebidas"},
     ])
-    
-    function disponivel(id){
-        params.produtos[id].disponivel = true;
-    }
 
     function decoracao(){
 
@@ -107,7 +103,7 @@
                         <div class="flex">
 
                             <div v-for="produto in produtos.value">                                     
-                                <Mesa class="flex" v-bind:adicionaAoCarrinho="adicionaAoCarrinho"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />                      
+                                <Mesa class="flex" v-bind:adicionaAoCarrinho="adicionaAoCarrinho"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto"/>                      
                             </div>                            
                         </div>
                 </div>
@@ -124,7 +120,7 @@
                         <div class="flex">
 
                             <div v-for="produto in produtos">
-                                <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" />
+                                <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto"/>
                                 
                             </div>
                     
@@ -144,7 +140,7 @@
 
                         <div v-for="produto in produtos">
                                 
-                            <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto" v-bind:disponivel="disponivel" />
+                            <Mesa class="flex"  v-if="filtro == produto.tipo || filtro == ''" v-bind:produtos="produto"/>
                                 
                         </div>
 
