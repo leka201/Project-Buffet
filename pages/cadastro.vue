@@ -19,16 +19,49 @@ import Login from './login.vue';
 
     async function enviaforms(){
 
-        resposta = await axios.post("http://localhost:3000/user/create", {
-            login:user.login,
-            cpf:user.cpf,
+        async function createUser(user) {
+    try {
+        const response = await axios.post("http://localhost:3001/user/create", {
+            login: user.login,
+            cpf: user.cpf,
             email: user.email,
             cep: user.cep,
             endereco: user.endereco,
             gender: user.gender,
             born: user.born,
             password: user.password
-        })
+        });
+        
+        // Se a resposta for bem-sucedida (status 200-299), você pode processar os dados
+        console.log('Usuário criado com sucesso:', response.data);
+    } catch (error) {
+        // Trata erros de rede ou de servidor
+        if (error.response) {
+            // Ocorreu uma resposta de erro do servidor (status diferente de 2xx)
+            if (error.response.status === 400) {
+                // Tratamento específico para o erro 400 (Bad Request)
+                console.error('Erro 400: Requisição inválida', error.response.data);
+                alert('Erro 400: Requisição inválida');
+            } else if (error.response.status === 301) {
+                // Tratamento específico para o erro 301 (Movido Permanentemente)
+                console.error('Erro 301: Redirecionamento necessário', error.response.data);
+                alert('Erro 301: Redirecionamento necessário');
+            } else {
+                // Tratamento genérico para outros erros (status diferente de 2xx)
+                console.error('Erro no servidor:', error.response.data);
+                alert('Ocorreu um erro no servidor');
+            }
+        } else if (error.request) {
+            // A requisição foi feita, mas não obteve resposta
+            console.error('Erro na requisição', error.request);
+            alert('Erro na requisição: Sem resposta do servidor');
+        } else {
+            // Alguma outra falha ocorreu ao configurar a requisição
+            console.error('Erro ao configurar a requisição', error.message);
+            alert('Erro ao configurar a requisição');
+        }
+    }
+}
 
         
         params.users.push(resposta.data.user)
