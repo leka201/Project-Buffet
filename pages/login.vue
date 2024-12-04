@@ -1,21 +1,25 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'; // Importa o useRouter
+import axios from 'axios';
 
 const params = defineProps(["users"]);
+const usuariosTemporarios = reactive([])
+const router = useRouter(); // Cria uma instância do router
 
 let email = ref('');
 let senha = ref('');
-const router = useRouter(); // Cria uma instância do router
 
-// Usuários temporários para validação
-const usuariosTemporarios = [
-    { name: 'João', cpf: '12345678900', email: 'joao@example.com', cep: '12345-678', endereco: 'Rua A, 123', gender: 'Masculino', born: '1990-01-01', password: 'senha123' },
-    { name: 'Maria', cpf: '98765432100', email: 'maria@example.com', cep: '87654-321', endereco: 'Rua B, 456', gender: 'Feminino', born: '1992-02-02', password: 'senha456' }
-];
+async function puxauser(){
+
+    const response = await axios.get("http://10.60.44.48:3001/user/read")
+    usuariosTemporarios.value=response.data.db
+    console.log('usuarios')
+    console.log(response.data.db)
+    }
 
 function autenticar() {
-    let user = usuariosTemporarios.find(u => u.email === email.value && u.password === senha.value);
+    let user = usuariosTemporarios.value.find(u => u.email === email.value && u.password === senha.value);
 
     if (!user) {
         alert('Usuário não encontrado');
@@ -23,13 +27,21 @@ function autenticar() {
     }
 
     alert('Usuário acessado com sucesso');
+
     localStorage.setItem("user", JSON.stringify(user));
     router.push('/perfil'); // Redireciona para a página de perfil
+
 }
+
+
+onMounted(() => {
+   puxauser()
+})
+
 </script>
 
 <template>
-    <div class="cadastro-div">
+   <form><div class="cadastro-div">
         <div class="cadastro-div2">
             <h1>Login</h1>
             <form @submit.prevent="autenticar">
@@ -41,11 +53,11 @@ function autenticar() {
                     <label for="password">Senha</label>
                     <input type="password" id="password" name="password" required v-model="senha">
                 </div>
-                <button type="submit">Entrar</button>
+                <button type="submit"href="/perfil" >Entrar</button>
             </form>
             <a href="cadastro">Não tem conta? Crie aqui</a>
         </div>
-    </div>
+    </div></form> 
 </template>
 
 <style scoped>
