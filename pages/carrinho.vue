@@ -7,46 +7,35 @@ console.log(params)
 const carrinho = reactive([])
 
 async function addcarrinho(){
-    const resposta_carrinho = await axios.post("http://10.60.44.47:3001/cart/create")
+    const resposta_carrinho = await axios.post("http://localhost:3001/cart/create")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)
 }
 
 async function lercarrinho(){
-    const resposta_carrinho = await axios.read("http://10.60.44.47:3001/cart/read")
+    const resposta_carrinho = await axios.read("http://localhost:3001/cart/read")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)
 }
 
 async function mostracarrinho(){
-    const resposta_carrinho = await axios.show("http://10.60.44.47:3001/cart/show")
+    const resposta_carrinho = await axios.show("http://localhost:3001/cart/show")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)
 }
 
-async function upcarrinho(){
-    const resposta_carrinho = await axios.update("http://10.60.44.47:3001/cart/update")
 
-    carrinho.value = resposta_carrinho.data.db
-    console.log(carrinho.value)
-}
 
-async function deletecarrinho(){
-    const resposta_carrinho = await axios.delete("http://10.60.44.47:3001/cart/delete")
-
-    carrinho.value = resposta_carrinho.data.db
-    console.log(carrinho.value)
-}
 
 onMounted(() => {
     addcarrinho()
     mostracarrinho()
     lercarrinho()
-    upcarrinho()
-    deletecarrinho()
+    
+    
 })
 
 </script>
@@ -61,7 +50,7 @@ onMounted(() => {
 
 
 <div class=" item">
-    <Mesa v-bind:EliminarItem="EliminarItem" v-for="produtoNoCarrinho in params.carrinho" v-bind:produtos="produtoNoCarrinho" v-bind:comprar="true" />
+    <Mesa v-bind:EliminarItem="EliminarItem" v-for="produtoNoCarrinho in params.carrinho" v-bind:produto="produtoNoCarrinho" v-bind:comprar="true" />
 </div> 
 
 
@@ -71,7 +60,7 @@ onMounted(() => {
 
 <div class="btncentro">
     <!-- <button class="cancelar">Cancelar tudo</button> -->
-    <a href="./pagamento" v-on:click="addcarrinho()"><button class="salvarContinuar">continuar</button></a>
+    <a href="./pagamento"><button class="salvarContinuar">continuar</button></a>
     </div>
     </template>
 

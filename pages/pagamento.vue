@@ -8,13 +8,26 @@ let metodo = ref();
 let paymentMethod = ref(''); // Variável para o método de pagamento
 let pagamento = reactive([]);
 let qrCodeValue = ref(''); // Valor que será codificado no QR Code
+let userLogado = ref(null);
+let items = ref('');
 
 function alterametodo(valor) {
     metodo.value = valor;
 }
 
+onMounted(() => {
+    userLogado()
+    items()
+})
+
+
+
 async function criar() {
-    const resposta_pagamento = await axios.post("http://localhost:3000/cart/create");
+    console.log("entrou na função")
+    const resposta_pagamento = await axios.post("http://localhost:3001/cart/create",{
+        "items": params.itens,
+        "clienteId":userLogado.id
+    });
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 
@@ -33,14 +46,14 @@ async function criar() {
 
 // Lista um único carrinho indv com pagamento
 async function mostrapagamento() {
-    const resposta_pagamento = await axios.get("http://localhost:3000/cart/show");
+    const resposta_pagamento = await axios.get("http://localhost:3001/cart/show");
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 }
 
 // Listar todos os carrinhos na tela de perfil
 async function lerpagamento() {
-    const resposta_pagamento = await axios.get("http://localhost:3000/cart/read");
+    const resposta_pagamento = await axios.get("http://localhost:3001/cart/read");
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 }
@@ -97,7 +110,7 @@ async function lerpagamento() {
             </div>
 
             <div class="cartaoSelecionar">
-                <button type="submit" class="efetuarPagamento">Efetuar pagamento</button>
+                <button type="submit" class="efetuarPagamento" v-on:click="criar()">Efetuar pagamento</button>
             </div>
         </form>
 
