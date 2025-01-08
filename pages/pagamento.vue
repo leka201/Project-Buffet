@@ -15,12 +15,6 @@ function alterametodo(valor) {
     metodo.value = valor;
 }
 
-onMounted(() => {
-    userLogado()
-    items()
-})
-
-
 
 async function criar() {
     console.log("entrou na função")
