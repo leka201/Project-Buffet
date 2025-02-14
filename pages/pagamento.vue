@@ -1,5 +1,10 @@
 <script setup>
 import { ref, reactive } from 'vue';
+
+import { useRouter } from 'vue-router';
+const router = useRouter();
+
+
 import axios from 'axios';
 import Pagamento_aprovado from './pagamento_aprovado.vue';
 import QRCode from 'qrcode.vue'; // Importando a biblioteca de QR Code
@@ -25,18 +30,37 @@ async function criar() {
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 
-    if (pagamento == Pagamento_aprovado) {
-        alert("Pagamento deu bom, meu campeão");
-    } else {
-        pagamento != Pagamento_aprovado;
-        alert("Paga a sua fatura, meu campeão");
-    }
+    resposta_pagamento = await axios.post("http://10.60.44.36:3001/party/create",{
+        "cartID": cart.id,
+        "clienteId": userLogado.id
+    })
+
+    //se der certo leva para a tela de perfil para ver as festas ou exibe uma mensagem de erro retornado pela api
 
     // Gerar um novo valor aleatório para o QR Code
     if (metodo.value === 'pix') {
         qrCodeValue.value = `Chave PIX: SoulFest@gmail.com?${Math.random()}`; // Valor dinâmico para o QR Code
     }
 }
+
+function recuperaLogin() {
+    const userData = localStorage.getItem("user");
+    if (userData) {
+        try {
+            userLogado.value = JSON.parse(userData);
+        } catch (error) {
+            console.error("Erro ao parsear dados do usuário:", error);
+            router.push('/login'); 
+        }
+    } else {
+        router.push('/login'); 
+    }
+}
+
+onMounted(() => {
+    recuperaLogin();
+
+});
 
 // Lista um único carrinho indv com pagamento
 async function mostrapagamento() {
@@ -57,7 +81,8 @@ async function lerpagamento() {
     <div class="junto">
         <h1 class="Titulo">Escolha sua forma de pagamento!</h1>
 
-        <form v-on:change="criar()" action="./pagamento_aprovado" class="centro">
+        <h1 v-if="userLogado == null">Fazer login</h1>
+        <form v-else v-on:change="criar()" action="./pagamento_aprovado" class="centro">
 
             <div class="cartaoSelecionar">
                 <label>

@@ -13,11 +13,11 @@ function carregadados() {
     if (userData) {
         try {
             user.value = JSON.parse(userData);
-            } catch (error) {
-                console.error("Erro ao parsear dados do usuário:", error);
-                router.push('/login'); // Redireciona se houver erro
-                }
-                } else {
+        } catch (error) {
+            console.error("Erro ao parsear dados do usuário:", error);
+            router.push('/login'); // Redireciona se houver erro
+        }
+    } else {
         router.push('/login'); // Redireciona se não houver usuário
     }
 }
