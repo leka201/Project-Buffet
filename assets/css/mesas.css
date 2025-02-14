@@ -42,7 +42,7 @@
     align-items: center;
     position: absolute;
     bottom: 15px; /* Posiciona o texto dentro do quadrado */
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%); /* Centraliza o texto horizontalmente */
     background-color: transparent; /* Remove qualquer fundo branco */
     color: #6E32A6; /* Cor do texto */
@@ -127,4 +127,16 @@ margin-top: -75px;
 .cancelar:hover{
     background: lightcoral;
     color: black;
+}
+
+.precoTexto{
+    position: absolute;
+    bottom: 10px; /* Posiciona o botão dentro do quadrado */
+    left: 70%;
+    transform: translateX(-50%); /* Centraliza o botão horizontalmente */
+    background-color: #6E32A6; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 30px;
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    z-index: 1;
 }
