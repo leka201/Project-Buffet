@@ -7,21 +7,21 @@ console.log(params)
 const carrinho = reactive([])
 
 async function addcarrinho(){
-    const resposta_carrinho = await axios.post("http://localhost:3001/cart/create")
+    const resposta_carrinho = await axios.post("http://10.60.44.36:3001/cart/create")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)
 }
 
 async function lercarrinho(){
-    const resposta_carrinho = await axios.read("http://localhost:3001/cart/read")
+    const resposta_carrinho = await axios.read("http://10.60.44.36:3001/cart/read")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)
 }
 
 async function mostracarrinho(){
-    const resposta_carrinho = await axios.show("http://localhost:3001/cart/show")
+    const resposta_carrinho = await axios.show("http://10.60.44.36:3001/cart/show")
 
     carrinho.value = resposta_carrinho.data.db
     console.log(carrinho.value)

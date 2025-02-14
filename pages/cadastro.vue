@@ -19,7 +19,7 @@ import axios from 'axios';
     async function enviaforms(){
         console.log('paasou aqui')
         try {
-            const response = await axios.post("http://10.60.44.48:3001/user/create", {
+            const response = await axios.post("http://10.60.44.36:3001/user/create", {
                 login: user.login,
                 cpf: user.cpf,
                 email: user.email,
@@ -31,7 +31,7 @@ import axios from 'axios';
             });
             console.log('Usuário criado com sucesso:', response.data);
             
-            params.users.push(response.data.user)
+            params.users.push(response.data.users)
             alert('usuario cadastrado com  sucesso')
         } catch (error) {
             alert(error.response.data.message);

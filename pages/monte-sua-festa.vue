@@ -9,8 +9,8 @@
     const produtos = ref([])
     async function BuscarProdutos(){
 
-        const resposta = await axios.get("http://localhost:3001/item/read")
-        produtos.value = resposta.data.db
+        const resposta = await axios.get("http://10.60.44.36:3001/item/read")
+        produtos.value = resposta.data.itens
         
     }
     onMounted ( () => {

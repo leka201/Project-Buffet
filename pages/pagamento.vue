@@ -18,7 +18,7 @@ function alterametodo(valor) {
 
 async function criar() {
     console.log("entrou na função")
-    const resposta_pagamento = await axios.post("http://localhost:3001/cart/create",{
+    const resposta_pagamento = await axios.post("http://10.60.44.36:3001/cart/create",{
         "items": params.itens,
         "clienteId":userLogado.id
     });
