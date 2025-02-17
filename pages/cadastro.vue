@@ -65,7 +65,7 @@ import axios from 'axios';
                 
                 <div class="input-conta">
                     <label for="cep">CEP</label>
-                    <input type="text" id="cep"minlength="9" required v-model="user.cep">
+                    <input type="text" id="cep"minlength="8" required v-model="user.cep">
                 </div>
                 
                 <div class="input-conta">
