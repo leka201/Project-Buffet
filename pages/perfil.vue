@@ -13,6 +13,7 @@ function carregadados() {
     if (userData) {
         try {
             user.value = JSON.parse(userData);
+            console.log(user.value)
         } catch (error) {
             console.error("Erro ao parsear dados do usuário:", error);
             router.push('/login'); // Redireciona se houver erro
@@ -44,14 +45,14 @@ onMounted(() => {
     <h1>Meu Perfil</h1>
 </div>
 
-<div class="informacao" v-if="user.name">
+<div class="informacao" v-if="user.login">
     <div class="inform">
         <div class="img perfil">
             <i class="fa-solid fa-user"></i>
         </div>
 
         <div class="center meio">
-            <h2><strong>{{ user.name }}</strong></h2>
+            <h2><strong>{{ user.login }}</strong></h2>
             <hr>
             <h2>Informações Pessoais:</h2>
             <p><strong>E-mail: </strong>{{ user.email }}</p>
