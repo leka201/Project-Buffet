@@ -4,26 +4,12 @@ body{
     
 }
 
-.cancelar{
-    background: red;
-    cursor: pointer;
-    color: #F5F5F5;
-    font-size: 15px;
-    border-radius: 30px;
-}
-
-.cancelar:hover{
-    background: lightcoral;
-    color: black;
-}
-
 .carrinho{
     margin-bottom: 20px;
 }
 
 .item{
     display: flex;
-    text-align: center;
     padding: 10px;
     color:#e6e7eb;
     gap:10px;
