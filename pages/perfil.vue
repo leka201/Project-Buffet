@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 
 let user = ref({});
 let compras = ref([]);
+let mostrarcpf = ref(false)
 const router = useRouter();
 
 function carregarDados() {
@@ -27,6 +28,11 @@ function carregarHistoricoCompras() {
     ];
 }
 
+function toggleMostrarCpf() {
+    mostrarcpf.value = !mostrarcpf.value;
+}
+
+
 function sair() {
     localStorage.removeItem("user");
     router.push('/login');
@@ -38,6 +44,8 @@ const formatarCPF = (cpf) => cpf ? cpf.replace(/\D/g, '').replace(/(\d{3})(\d)/g
 const formatarMoeda = (valor) => valor ? `R$ ${valor.toFixed(2).replace(".", ",")}` : "Valor não disponível";
 
 onMounted(carregarDados);
+
+    
 
 </script>
 
@@ -57,7 +65,24 @@ onMounted(carregarDados);
                 <hr>
                 <h2>Informações Pessoais:</h2>
                 <p><strong>Email: </strong>{{ user.email }}</p>
-                <p><strong>CPF: </strong>{{ formatarCPF(user.cpf) }}</p>
+                <p v-if="mostrarcpf"><strong>CPF: </strong>{{ formatarCPF(user.cpf) }}</p>
+                <p v-else><strong>CPF: </strong>xxx.xxx.xxx-xx</p>
+                <button
+                    @click="toggleMostrarCpf"
+                    class="p-2 bg-gray-200 rounded hover:bg-gray-300 transition"
+                    >
+                    <span v-if="mostrarcpf">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.761 5 12 5c4.24 0 8.268 2.943 9.542 7-1.274 4.057-5.303 7-9.542 7-4.24 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </span>
+                    <span v-else>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.875 18.825c-.624.033-1.258.05-1.875.05-4.24 0-8.268-2.943-9.542-7C3.732 7.943 7.761 5 12 5c.618 0 1.251.017 1.875.05M21 21l-5.197-5.197m0 0A9.935 9.935 0 0112 17c-4.24 0-8.268-2.943-9.542-7C3.732 7.943 7.761 5 12 5c4.239 0 8.268 2.943 9.542 7-.544 1.743-1.5 3.278-2.697 4.497zm0 0L21 21z"/>
+                        </svg>
+                    </span>
+                </button>                
                 <p><strong>Data de nascimento: </strong>{{ formatarData(user.born) }}</p>
             
                 <router-link to="/alteracao">
