@@ -64,14 +64,14 @@ onMounted(() => {
 
 // Lista um único carrinho indv com pagamento
 async function mostrapagamento() {
-    const resposta_pagamento = await axios.get("http://localhost:3001/cart/show");
+    const resposta_pagamento = await axios.get("http://10.60.44.36:3001/cart/show");
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 }
 
 // Listar todos os carrinhos na tela de perfil
 async function lerpagamento() {
-    const resposta_pagamento = await axios.get("http://localhost:3001/cart/read");
+    const resposta_pagamento = await axios.get("http://10.60.44.36:3001/cart/read");
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 }

@@ -36,7 +36,9 @@
         <div class="social-icons">
           <a href="https://facebook.com" target="_blank">Facebook</a>
           <a href="https://instagram.com" target="_blank">Instagram</a>
-          <a href="https://twitter.com" target="_blank">Bluesky</a>
+          <a href="https://twitter.com" target="_blank">Twwiter
+            
+          </a>
         </div>
       </div>
     </footer>
