@@ -1,123 +1,159 @@
 <script setup>
-
 import axios from 'axios';
+import { reactive, onMounted } from 'vue';
 
 const params = defineProps(["carrinho", "EliminarItem"]);
-console.log(params)
-const carrinho = reactive([])
+console.log(params);
 
-async function addcarrinho(){
-    const resposta_carrinho = await axios.post("http://10.60.44.36:3001/cart/create")
+// Usando reactive para o carrinho no Vue
+const carrinho = reactive([]);
 
-    carrinho.value = resposta_carrinho.data.db
-    console.log(carrinho.value)
+// Funções para interagir com o carrinho
+async function addcarrinho() {
+    const resposta_carrinho = await axios.post("http://10.60.44.36:3001/cart/create");
+    carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
+    console.log(carrinho);
 }
 
-async function lercarrinho(){
-    const resposta_carrinho = await axios.read("http://10.60.44.36:3001/cart/read")
-
-    carrinho.value = resposta_carrinho.data.db
-    console.log(carrinho.value)
+async function lercarrinho() {
+    const resposta_carrinho = await axios.get("http://10.60.44.36:3001/cart/read");  // Método correto para GET
+    carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
+    console.log(carrinho);
 }
 
-async function mostracarrinho(){
-    const resposta_carrinho = await axios.show("http://10.60.44.36:3001/cart/show")
-
-    carrinho.value = resposta_carrinho.data.db
-    console.log(carrinho.value)
+async function mostracarrinho() {
+    const resposta_carrinho = await axios.get("http://10.60.44.36:3001/cart/show"); // Método correto para GET
+    carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
+    console.log(carrinho);
 }
 
-
-
-
+// Chama as funções no onMounted para carregar os dados do carrinho ao montar o componente
 onMounted(() => {
-    addcarrinho()
-    mostracarrinho()
-    lercarrinho()
-    
-    
-})
-
+    addcarrinho();
+    mostracarrinho();
+    lercarrinho();
+});
 </script>
 
 <template>
-
-<div class="sombra">
+  <div class="sombra">
     <div class="titulo">
-        <h1>Carrinho:</h1>
+      <h1 class="cor">Carrinho:</h1>
     </div>
-</div>
+  </div>
 
-
-<div class=" item">
-    <Mesa v-bind:EliminarItem="EliminarItem" v-for="produtoNoCarrinho in params.carrinho" v-bind:produto="produtoNoCarrinho" v-bind:comprar="true" />
-</div> 
-
-
-<br/>
-
-<hr class="carrinho">
-
-<div class="btncentro">
-    <!-- <button class="cancelar">Cancelar tudo</button> -->
-    <a href="./pagamento"><button class="salvarContinuar">continuar</button></a>
+  <div class="item">
+    <!-- Botão para redirecionar para a página "monte-sua-festa" -->
+    <div class="distancia" v-if="!params.carrinho || params.carrinho.length === 0">
+      <a class="persobtn" href="./monte-sua-festa">Ir para Monte sua Festa</a>
+      <img class="imagem-carrinho" src="/public/img/carrinho vazio.png" width="150px">
     </div>
-    </template>
+
+    <!-- Lista os itens do carrinho, se não estiver vazio -->
+    <div v-else>
+      <Mesa
+        v-for="produtoNoCarrinho in params.carrinho"
+        :key="produtoNoCarrinho.id"
+        :EliminarItem="EliminarItem"
+        :produto="produtoNoCarrinho"
+        :comprar="true"
+      />
+      <br />
+      <hr class="carrinho" />
+
+      <div class="btncentro">
+        <a href="./pagamento"><button class="salvarContinuar">Continuar</button></a>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped>
-
 @import url("~/assets/css/Carrinho_projeto.css");
 
-.display{
-    display: flex;
-    gap:15px;
+.display {
+  display: flex;
+  gap: 15px;
 }
 
-.titulo{
-    background: #6E32A6;
-    color: #F5F5F5;
-    text-align: center;
-    padding: 0px;
-    margin: 0;
-    border-radius: 20px;
-    font-size: 15px;
-    margin-bottom: 20px ;
-}
-.sombra{
-    padding: 0px;
-    background-color: #f8f8f8;
-    border-radius: 20px; /* Bordas arredondadas (opcional) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Horizontal, vertical, desfoque, cor */
+.titulo {
+  background: #6e32a6;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 0px;
+  margin: 0;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 
-.btncentro{
-    text-align: center;
+.sombra {
+  padding: 0px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
-.cancelar{
-    background: red;
-    cursor: pointer;
-    color: #F5F5F5;
-    font-size: 15px;
-    border-radius: 30px;
+.btncentro {
+  text-align: center;
 }
 
-.cancelar:hover{
-    background: lightcoral;
-    color: black;
+.salvarContinuar {
+  background: green;
+  cursor: pointer;
+  color: #f5f5f5;
+  font-size: 15px;
+  border-radius: 30px;
 }
 
-.salvarContinuar{
-    background: green;
-    cursor: pointer;
-    color: #F5F5F5;
-    font-size: 15px;
-    border-radius: 30px;
+.salvarContinuar:hover {
+  background: lightgreen;
+  color: black;
 }
 
-.salvarContinuar:hover{
-    background: lightgreen;
-    color: black;
+.persobtn {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-size: 20px;
+  background-color: #f5f5f5;
+  padding: 10px 30px;
+  border-radius: 150px;
+  text-decoration: none;
+}
+
+.persobtn:hover {
+  background-color: #6e32a6;
+  color: white;
+}
+
+.margin {
+  text-decoration: unset;
+  margin-left: 10px;
+}
+
+.marginbtn {
+  margin: 30px;
+}
+
+.marginimg {
+  margin-left: -80px;
+}
+
+.distancia {
+  margin-left: 42%;
+  margin-top: 30px; /* Para garantir que o botão tenha uma distância do topo */
+ 
+}
+
+.imagem-carrinho {
+  display: flex;
+  margin-top: 60px;
+  margin-left: 20%;
+}
+
+.cor{
+    color:#f5f5f5
 }
 
 
