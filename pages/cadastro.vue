@@ -19,7 +19,7 @@ import axios from 'axios';
     async function enviaforms(){
         console.log('paasou aqui')
         try {
-            const response = await axios.post("http://10.60.44.36:3001/user/create", {
+            const response = await axios.post("http://10.60.44.35:3001/user/create", {
                 login: user.login,
                 cpf: user.cpf,
                 email: user.email,

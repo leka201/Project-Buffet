@@ -23,14 +23,14 @@ function alterametodo(valor) {
 
 async function criar() {
     console.log("entrou na função")
-    const resposta_pagamento = await axios.post("http://10.60.44.36:3001/cart/create",{
+    const resposta_pagamento = await axios.post("http://10.60.44.35:3001/cart/create",{
         "items": params.itens,
         "clienteId":userLogado.id
     });
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 
-    resposta_pagamento = await axios.post("http://10.60.44.36:3001/party/create",{
+    resposta_pagamento = await axios.post("http://10.60.44.35:3001/party/create",{
         "cartID": cart.id,
         "clienteId": userLogado.id
     })
@@ -64,14 +64,14 @@ onMounted(() => {
 
 // Lista um único carrinho indv com pagamento
 async function mostrapagamento() {
-    const resposta_pagamento = await axios.get("http://10.60.44.36:3001/cart/show");
+    const resposta_pagamento = await axios.get("http://10.60.44.35:3001/cart/show");
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 }
 
 // Listar todos os carrinhos na tela de perfil
 async function lerpagamento() {
-    const resposta_pagamento = await axios.get("http://10.60.44.36:3001/cart/read");
+    const resposta_pagamento = await axios.get("http://10.60.44.35:3001/cart/read");
     pagamento.value = resposta_pagamento.data.db;
     console.log(pagamento.value);
 }

@@ -9,7 +9,6 @@
         <img class="redonda " v-bind:src="params.produto.imagem" width="300px" alt="Mesas">
         <div v-on:click="params.adicionaAoCarrinho(params.produto)" class="texto" v-if="params.comprar == false || params.comprar == null">Comprar</div>
         <button class="cancelar" v-on:click="params.EliminarItem(params.produto)" v-if="params.comprar == true">Remover</button>
-        <p class="precoTexto">R$50,00</p>
     </div>
 </template>
 

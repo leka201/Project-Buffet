@@ -12,7 +12,7 @@ let senha = ref('');
 
 async function puxauser(){
 
-    const response = await axios.get("http://10.60.44.36:3001/user/read")
+    const response = await axios.get("http://10.60.44.35:3001/user/read")
     usuariosTemporarios.value=response.data.users
     console.log('usuarios')
     console.log(response.data.users)

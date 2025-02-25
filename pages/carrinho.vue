@@ -8,21 +8,23 @@ console.log(params);
 // Usando reactive para o carrinho no Vue
 const carrinho = reactive([]);
 
+
 // Funções para interagir com o carrinho
 async function addcarrinho() {
-    const resposta_carrinho = await axios.post("http://10.60.44.36:3001/cart/create");
+    const resposta_carrinho = await axios.post("http://10.60.44.35:3001/cart/create");
     carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
     console.log(carrinho);
+
 }
 
 async function lercarrinho() {
-    const resposta_carrinho = await axios.get("http://10.60.44.36:3001/cart/read");  // Método correto para GET
+    const resposta_carrinho = await axios.get("http://10.60.44.35:3001/cart/read");  // Método correto para GET
     carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
     console.log(carrinho);
 }
 
 async function mostracarrinho() {
-    const resposta_carrinho = await axios.get("http://10.60.44.36:3001/cart/show"); // Método correto para GET
+    const resposta_carrinho = await axios.get("http://10.60.44.35:3001/cart/show"); // Método correto para GET
     carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
     console.log(carrinho);
 }
@@ -33,6 +35,8 @@ onMounted(() => {
     mostracarrinho();
     lercarrinho();
 });
+
+
 </script>
 
 <template>
@@ -42,7 +46,7 @@ onMounted(() => {
     </div>
   </div>
 
-  <div class="item">
+  <div>
     <!-- Botão para redirecionar para a página "monte-sua-festa" -->
     <div class="distancia" v-if="!params.carrinho || params.carrinho.length === 0">
       <a class="persobtn" href="./monte-sua-festa">Ir para Monte sua Festa</a>
@@ -50,7 +54,7 @@ onMounted(() => {
     </div>
 
     <!-- Lista os itens do carrinho, se não estiver vazio -->
-    <div v-else>
+    <div class="item" v-else>
       <Mesa
         v-for="produtoNoCarrinho in params.carrinho"
         :key="produtoNoCarrinho.id"
@@ -59,17 +63,20 @@ onMounted(() => {
         :comprar="true"
       />
       <br />
-      <hr class="carrinho" />
-
-      <div class="btncentro">
-        <a href="./pagamento"><button class="salvarContinuar">Continuar</button></a>
-      </div>
+      
+      
+    </div>
+    
+    <div class="btncentro" v-if="params.carrinho && params.carrinho.length > 0">
+      <a href="./pagamento"><button class="salvarContinuar">Continuar</button></a>
     </div>
   </div>
 </template>
 
 <style scoped>
 @import url("~/assets/css/Carrinho_projeto.css");
+
+
 
 .display {
   display: flex;
@@ -96,6 +103,15 @@ onMounted(() => {
 
 .btncentro {
   text-align: center;
+  margin-top: auto;
+  margin:center;
+  margin-right: auto;
+}
+
+.btncentro {
+    position: fixed;
+    bottom: 10px;
+    left: calc(50% - 100px);
 }
 
 .salvarContinuar {
@@ -120,24 +136,12 @@ onMounted(() => {
   padding: 10px 30px;
   border-radius: 150px;
   text-decoration: none;
+  left: 50%;
 }
 
 .persobtn:hover {
   background-color: #6e32a6;
   color: white;
-}
-
-.margin {
-  text-decoration: unset;
-  margin-left: 10px;
-}
-
-.marginbtn {
-  margin: 30px;
-}
-
-.marginimg {
-  margin-left: -80px;
 }
 
 .distancia {
@@ -149,12 +153,26 @@ onMounted(() => {
 .imagem-carrinho {
   display: flex;
   margin-top: 60px;
-  margin-left: 20%;
+  margin-left: 5%;
 }
 
 .cor{
     color:#f5f5f5
 }
+
+.item{
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  flex: 0 auto;
+  color:#e6e7eb;
+  gap:10px;
+  border-radius: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 
 
 </style>
