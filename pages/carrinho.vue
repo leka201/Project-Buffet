@@ -11,20 +11,20 @@ const carrinho = reactive([]);
 
 // Funções para interagir com o carrinho
 async function addcarrinho() {
-    const resposta_carrinho = await axios.post("http://10.60.44.35:3001/cart/create");
+    const resposta_carrinho = await axios.post("http://localhost:3001/cart/create");
     carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
     console.log(carrinho);
 
 }
 
 async function lercarrinho() {
-    const resposta_carrinho = await axios.get("http://10.60.44.35:3001/cart/read");  // Método correto para GET
+    const resposta_carrinho = await axios.get("http://localhost:3001/cart/read");  // Método correto para GET
     carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
     console.log(carrinho);
 }
 
 async function mostracarrinho() {
-    const resposta_carrinho = await axios.get("http://10.60.44.35:3001/cart/show"); // Método correto para GET
+    const resposta_carrinho = await axios.get("http://localhost:3001/cart/show"); // Método correto para GET
     carrinho.splice(0, carrinho.length, ...resposta_carrinho.data.db); // Atualizando o carrinho
     console.log(carrinho);
 }
